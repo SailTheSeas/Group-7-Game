@@ -6,7 +6,8 @@ public class ItemPlacementSpot : MonoBehaviour
 {
     [SerializeField] private Vector3 rotationOfItem;
     [SerializeField] private Vector3 positionOfItem;
-
+    [SerializeField] private GameObject room;
+    [SerializeField] private ItemClass sizeCanFit;
     // Update is called once per frame
     void Update()
     {
@@ -17,7 +18,8 @@ public class ItemPlacementSpot : MonoBehaviour
     {
         if (other.TryGetComponent<ItemDragging>(out ItemDragging ID))
         {
-            ID.SetPlacementSpot(this);
+            if (ID.GetItemClass() == sizeCanFit)
+                ID.SetPlacementSpot(this);
         }
     }
 
@@ -37,6 +39,11 @@ public class ItemPlacementSpot : MonoBehaviour
     public Vector3 GetRotation()
     {
         return rotationOfItem;
+    }
+
+    public GameObject GetRoom()
+    {
+        return room;
     }
 
     private void OnMouseEnter()

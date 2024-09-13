@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ItemDragging : MonoBehaviour
 {
+    [SerializeField] private ItemClass itemSize;
+
     private Vector3 mousePosition;
     private bool isHeld;
 
     private Rigidbody RB;
 
-    private ItemPlacementSpot hoveredSpot;
+    private ItemPlacementSpot hoveredSpot;    
     private bool canBePlaced;
 
     public void SetPlacementSpot(ItemPlacementSpot newSpot)
@@ -18,10 +20,16 @@ public class ItemDragging : MonoBehaviour
         hoveredSpot = newSpot;
     }
 
+
     public void ResetPlacementSpot()
     {
         canBePlaced = false;
         hoveredSpot = null;
+    }
+
+    public ItemClass GetItemClass()
+    {
+        return itemSize;
     }
 
     private void Start()
@@ -29,6 +37,14 @@ public class ItemDragging : MonoBehaviour
         canBePlaced = false;
         isHeld = false;
         RB = GetComponent<Rigidbody>();
+        StartCoroutine(FreezeObject(2f));
+    }
+
+    private void Update()
+    {
+ /*       Debug.Log(RB.velocity);
+        if (RB.velocity.y >= 0)
+            RB.constraints = RigidbodyConstraints.FreezeAll;*/
     }
 
     private void OnMouseDown()
@@ -38,18 +54,25 @@ public class ItemDragging : MonoBehaviour
         {
             RB.useGravity = true;
             isHeld = false;
+            this.transform.parent = FindObjectOfType<Rooms>().GetCurrentRoom().transform;
             if (canBePlaced)
             {
                 this.transform.position = hoveredSpot.GetPosition();
                 this.transform.rotation = Quaternion.Euler(hoveredSpot.GetRotation());
-                
+                this.transform.parent = hoveredSpot.GetRoom().transform;
+                StartCoroutine(FreezeObject(0.75f));
+            } else
+            {
+                StartCoroutine(FreezeObject(3f));
             }
         } else
         {
             RB.useGravity = false;
+            RB.constraints = RigidbodyConstraints.FreezeRotation;
             mousePosition = Input.mousePosition - GetMousePosition();
-            isHeld = true;
-
+            isHeld = true;            
+            this.transform.parent = null;
+            
         }
     }
 
@@ -57,7 +80,9 @@ public class ItemDragging : MonoBehaviour
     {
         if (isHeld)
         {           
-            this.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition-mousePosition);
+            this.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition-mousePosition).x, 
+                Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition).y, 
+                Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition).z);
         }
     }
 
@@ -66,4 +91,10 @@ public class ItemDragging : MonoBehaviour
         return Camera.main.WorldToScreenPoint(transform.position);
     }
 
+
+    IEnumerator FreezeObject(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        RB.constraints = RigidbodyConstraints.FreezeAll;
+    }
 }
