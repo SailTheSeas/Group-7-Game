@@ -21,24 +21,29 @@ public class RoomChanging : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         
     }
 
+    public void ColorShift(Color colour)
+    {
+        display.color = colour;
+    }
+
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        Debug.Log("In");
-        display.color = Color.grey;
+        
+        /*display.color = Color.grey;*/
         StartCoroutine(ChangeRoom());
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        Debug.Log("Out");
-        display.color = Color.white;
+        
+        /*display.color = Color.white;*/
         StopCoroutine(ChangeRoom());
     }
 
 
     IEnumerator ChangeRoom()
     {
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(0.25f);
         display.color = Color.white;
         roomManager.ChangeRoom(dir);    
     }

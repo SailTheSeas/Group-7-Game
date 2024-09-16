@@ -8,18 +8,36 @@ public class ItemPlacementSpot : MonoBehaviour
     [SerializeField] private Vector3 positionOfItem;
     [SerializeField] private GameObject room;
     [SerializeField] private ItemClass sizeCanFit;
-    // Update is called once per frame
-    void Update()
+
+    bool isUsed;
+    
+    public void SetIsUsed(bool state)
+    {
+        isUsed = state;
+    }
+
+    private void Update()
     {
         
+    }
+
+    private void Start()
+    {
+        isUsed = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<ItemDragging>(out ItemDragging ID))
         {
-            if (ID.GetItemClass() == sizeCanFit)
-                ID.SetPlacementSpot(this);
+            if (!isUsed)
+            {
+                if (ID.GetItemClass() == sizeCanFit)
+                {
+                    ID.SetPlacementSpot(this);
+                    
+                }
+            }
         }
     }
 
@@ -28,6 +46,7 @@ public class ItemPlacementSpot : MonoBehaviour
         if (other.TryGetComponent<ItemDragging>(out ItemDragging ID))
         {
             ID.ResetPlacementSpot();
+            
         }
     }
 
