@@ -68,7 +68,7 @@ public class ItemDragging : MonoBehaviour
             if (canBePlaced)
             {
                 
-                this.transform.rotation = Quaternion.Euler(hoveredSpot.GetRotation());
+                this.transform.localRotation = Quaternion.Euler(hoveredSpot.GetRotation());
                 this.transform.parent = hoveredSpot.GetRoom().transform;
                 this.transform.localPosition = hoveredSpot.GetPosition();
                 hoveredSpot.SetIsUsed(true);
@@ -103,8 +103,8 @@ public class ItemDragging : MonoBehaviour
         if (isHeld)
         {           
             this.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition-mousePosition).x, 
-                Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition).y, 
-                Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition).z);
+                Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition).y,
+                -3);
         } else
         {
             if (Physics.Raycast(transform.position,transform.TransformDirection(Vector3.down),(transform.localScale.y/2),floorLayer))
@@ -112,7 +112,7 @@ public class ItemDragging : MonoBehaviour
                 RB.constraints = RigidbodyConstraints.FreezeAll;
             } else
             {
-                RB.constraints = RigidbodyConstraints.FreezeRotation;
+                RB.constraints = RigidbodyConstraints.None;
             }
         }
 
