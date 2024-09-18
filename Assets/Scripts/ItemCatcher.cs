@@ -12,7 +12,7 @@ public class ItemCatcher : MonoBehaviour
         if (other.TryGetComponent(out ItemDragging ID))
         {
             other.transform.parent = roomManager.GetCurrentRoom().transform;
-            other.transform.position = resetPosition;
+            other.transform.localPosition = resetPosition;
         }
     }
 }

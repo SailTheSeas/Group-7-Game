@@ -8,12 +8,29 @@ public class ItemPlacementSpot : MonoBehaviour
     [SerializeField] private Vector3 positionOfItem;
     [SerializeField] private GameObject room;
     [SerializeField] private ItemClass sizeCanFit;
+    [SerializeField] private string itemId;
 
-    bool isUsed;
-    
+    private ItemDragging item;
+    private bool isUsed;
+    private int tempScore;
+    private ScoreCounter SC;
+
     public void SetIsUsed(bool state)
     {
         isUsed = state;
+        if (state)
+        {
+            if (itemId == item.GetItemId())
+                tempScore = 4;
+            else if (sizeCanFit == item.GetItemClass())
+                tempScore = 2;
+                else
+                tempScore = 1;
+            SC.UpdateScore(tempScore);
+        } else
+        {
+            SC.UpdateScore(-tempScore);
+        }
     }
 
     private void Update()
@@ -24,17 +41,19 @@ public class ItemPlacementSpot : MonoBehaviour
     private void Start()
     {
         isUsed = false;
+        SC = FindObjectOfType<ScoreCounter>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<ItemDragging>(out ItemDragging ID))
+        if (other.TryGetComponent<ItemDragging>(out item))
         {
             if (!isUsed)
             {
-                if (ID.GetItemClass() == sizeCanFit)
+                if (item.GetItemClass() <= sizeCanFit)
                 {
-                    ID.SetPlacementSpot(this);
+                    if (item.GetIsHeld())
+                        item.SetPlacementSpot(this);
                     
                 }
             }
@@ -43,9 +62,9 @@ public class ItemPlacementSpot : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<ItemDragging>(out ItemDragging ID))
+        if (other.TryGetComponent<ItemDragging>(out item))
         {
-            ID.ResetPlacementSpot();
+            item.ResetPlacementSpot();
             
         }
     }

@@ -5,6 +5,10 @@ using UnityEngine;
 public class ItemDragging : MonoBehaviour
 {
     [SerializeField] private ItemClass itemSize;
+    [SerializeField] private string itemID;
+
+
+    private int tempScore;
 
     private LayerMask floorLayer;
 
@@ -20,6 +24,13 @@ public class ItemDragging : MonoBehaviour
 
     private ItemManager itemManager;
 
+  
+
+    public void SetScore(int newScore)
+    {
+        tempScore = newScore;
+    }
+
     public void SetPlacementSpot(ItemPlacementSpot newSpot)
     {
         canBePlaced = true;
@@ -33,9 +44,45 @@ public class ItemDragging : MonoBehaviour
         hoveredSpot = null;
     }
 
+    public bool GetIsHeld()
+    {
+        return isHeld;
+    }
+
+    public string GetItemId()
+    {
+        return itemID;
+    }
+
+    public int GetScore()
+    {
+        return tempScore;
+    }
+
     public ItemClass GetItemClass()
     {
         return itemSize;
+    }
+
+    public void PlaceItem()
+    {
+        itemManager.SetHoldingState(false);
+        RB.useGravity = true;
+        isHeld = false;
+        this.transform.parent = FindObjectOfType<Rooms>().GetCurrentRoom().transform;
+        if (canBePlaced)
+        {
+
+            this.transform.localRotation = Quaternion.Euler(hoveredSpot.GetRotation());
+            this.transform.parent = hoveredSpot.GetRoom().transform;
+            this.transform.localPosition = hoveredSpot.GetPosition();
+            hoveredSpot.SetIsUsed(true);
+            //StartCoroutine(FreezeObject(0.75f));
+        }
+        else
+        {
+
+        }
     }
 
     private void Start()
@@ -61,27 +108,13 @@ public class ItemDragging : MonoBehaviour
         
         if (isHeld)
         {
-            itemManager.SetHoldingState(false);
-            RB.useGravity = true;
-            isHeld = false;
-            this.transform.parent = FindObjectOfType<Rooms>().GetCurrentRoom().transform;
-            if (canBePlaced)
-            {
-                
-                this.transform.localRotation = Quaternion.Euler(hoveredSpot.GetRotation());
-                this.transform.parent = hoveredSpot.GetRoom().transform;
-                this.transform.localPosition = hoveredSpot.GetPosition();
-                hoveredSpot.SetIsUsed(true);
-                //StartCoroutine(FreezeObject(0.75f));
-            } else
-            {
-                
-            }
+            PlaceItem();
         } else
         {
             if (!itemManager.GetHoldingState())
             {
                 itemManager.SetHoldingState(true);
+                itemManager.SetHoldingItem(this);
                 RB.useGravity = false;
                 RB.constraints = RigidbodyConstraints.FreezeRotation;
                 mousePosition = Input.mousePosition - GetMousePosition();
@@ -91,7 +124,7 @@ public class ItemDragging : MonoBehaviour
                 
                 this.transform.parent = null;
                 this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -3f);
-                this.transform.rotation = Quaternion.Euler(0, 0, 0);
+                this.transform.rotation = Quaternion.Euler(-30, 0, 0);
                 isHeld = true;
                 //this.transform.LookAt(cameraPos);
             }
@@ -107,9 +140,10 @@ public class ItemDragging : MonoBehaviour
                 -3);
         } else
         {
-            if (Physics.Raycast(transform.position,transform.TransformDirection(Vector3.down),(transform.localScale.y/2),floorLayer))
+            if (Physics.Raycast(transform.position,Vector3.down,(transform.localScale.y/2)+ transform.localScale.y/10, floorLayer))
             {
                 RB.constraints = RigidbodyConstraints.FreezeAll;
+                this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y,0);
             } else
             {
                 RB.constraints = RigidbodyConstraints.None;
@@ -123,6 +157,7 @@ public class ItemDragging : MonoBehaviour
         return Camera.main.WorldToScreenPoint(transform.position);
     }
 
+    
 
     IEnumerator FreezeObject(float delay)
     {

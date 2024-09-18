@@ -6,7 +6,7 @@ public class Rooms : MonoBehaviour
 {
     [SerializeField] private GameObject[] rooms;
     [SerializeField] private Vector3[] positions;
-    [SerializeField] private Vector3 center, hidden;
+
     [SerializeField] private int startingRoom, totalRooms;
     [SerializeField] private GameObject cameraMain;
     [SerializeField] private RoomChanging[] changers;
