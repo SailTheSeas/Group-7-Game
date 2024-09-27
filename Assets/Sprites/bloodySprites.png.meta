@@ -1,0 +1,669 @@
+fileFormatVersion: 2
+guid: b7b3fb2ce2d8aa440ad2ae50f11ceba7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bloodySprites_0
+      rect:
+        serializedVersion: 2
+        x: 4609
+        y: 3736
+        width: 466
+        height: 1100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebbba3325cc3334ab8a0aebe737a56e
+      internalID: -734183078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_1
+      rect:
+        serializedVersion: 2
+        x: 5209
+        y: 3722
+        width: 493
+        height: 1104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2c203fd57c4874ba8e9b8e6d56a237
+      internalID: -79493867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_2
+      rect:
+        serializedVersion: 2
+        x: 5799
+        y: 4108
+        width: 481
+        height: 767
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b647ee48b9d100419e915b88dc038d2
+      internalID: -603305966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_3
+      rect:
+        serializedVersion: 2
+        x: 6329
+        y: 4648
+        width: 189
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720da7d428d74bc4f8be911e6467f520
+      internalID: -750944796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_4
+      rect:
+        serializedVersion: 2
+        x: 6620
+        y: 4781
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f978e0ef72d91fb42b4870400de34524
+      internalID: -906703538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_
+      rect:
+        serializedVersion: 2
+        x: 6350
+        y: 4442
+        width: 161
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e59f8e43c5149469497febdee8cfbf
+      internalID: -2023876223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_5
+      rect:
+        serializedVersion: 2
+        x: 6545
+        y: 4473
+        width: 86
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902a96d2e09f50d4b8d61338cd5dd815
+      internalID: -23564040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_7
+      rect:
+        serializedVersion: 2
+        x: 6524
+        y: 4271
+        width: 134
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf9bae233580f54cbc05adbe7702feb
+      internalID: 2089177899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_6
+      rect:
+        serializedVersion: 2
+        x: 6363
+        y: 4284
+        width: 117
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625752397c688e44dbde7d59bf538de9
+      internalID: -2105906445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_8
+      rect:
+        serializedVersion: 2
+        x: 5819
+        y: 3911
+        width: 411
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b0ae90ef168da45b15fea14bdfdaa0
+      internalID: 637567914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_9
+      rect:
+        serializedVersion: 2
+        x: 5771
+        y: 3688
+        width: 565
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5ad4bfc035352458ab79ae3d3e4d03
+      internalID: 27765056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_10
+      rect:
+        serializedVersion: 2
+        x: 5750
+        y: 3202
+        width: 463
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2388ab9a1f9cc1f4591b25c5ce0680e2
+      internalID: -89546546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_11
+      rect:
+        serializedVersion: 2
+        x: 5730
+        y: 2588
+        width: 781
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119b6402581528f488515393ac2377ba
+      internalID: 1881905274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_12
+      rect:
+        serializedVersion: 2
+        x: 5812
+        y: 2263
+        width: 414
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f776429b2cd3dcb4181122b8be98feac
+      internalID: -352096857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_13
+      rect:
+        serializedVersion: 2
+        x: 5778
+        y: 1855
+        width: 346
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87312fd20f7819f4d8910e3d66c74915
+      internalID: -606631065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_14
+      rect:
+        serializedVersion: 2
+        x: 5706
+        y: 1420
+        width: 445
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26a18693a46762468bd35d9245ba7a7
+      internalID: 1512507085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_17
+      rect:
+        serializedVersion: 2
+        x: 5267
+        y: 266
+        width: 456
+        height: 647
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1de7d154524ab45b53587c00006d9b
+      internalID: 2131852087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_15
+      rect:
+        serializedVersion: 2
+        x: 5747
+        y: 694
+        width: 383
+        height: 664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecf0ddfe4cd885438e503efb763b501
+      internalID: -236584380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bloodySprites_16
+      rect:
+        serializedVersion: 2
+        x: 5777
+        y: 293
+        width: 363
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a93ad254e0260c4eac8e1c6af2e2caf
+      internalID: -447885649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marksprite_1
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 3775
+        width: 433
+        height: 962
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bbe1672ed39dda47a2e8785d9c583ca
+      internalID: -201331962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marksprite_0
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 3775
+        width: 452
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9359ca32069754242a3932be30991fbd
+      internalID: -310733692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 590c0b1012455e249934ecacfb4ce1d1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bloodySprites_: -2023876223
+      bloodySprites_0: -734183078
+      bloodySprites_1: -79493867
+      bloodySprites_10: -89546546
+      bloodySprites_11: 1881905274
+      bloodySprites_12: -352096857
+      bloodySprites_13: -606631065
+      bloodySprites_14: 1512507085
+      bloodySprites_15: -236584380
+      bloodySprites_16: -447885649
+      bloodySprites_17: 2131852087
+      bloodySprites_18: 1591901420
+      bloodySprites_19: -572864565
+      bloodySprites_2: -603305966
+      bloodySprites_20: 856330825
+      bloodySprites_21: -1423494351
+      bloodySprites_22: -400854357
+      bloodySprites_23: 1654000349
+      bloodySprites_24: -1864081435
+      bloodySprites_25: -1632912896
+      bloodySprites_26: 1184385040
+      bloodySprites_27: -550660233
+      bloodySprites_28: 697630618
+      bloodySprites_29: 193029623
+      bloodySprites_3: -750944796
+      bloodySprites_30: 406739119
+      bloodySprites_31: 54229831
+      bloodySprites_32: -1482956292
+      bloodySprites_33: 349669012
+      bloodySprites_34: 322509560
+      bloodySprites_35: -668784590
+      bloodySprites_36: -214184540
+      bloodySprites_37: 1409771174
+      bloodySprites_38: 736863111
+      bloodySprites_4: -906703538
+      bloodySprites_40: -1519591018
+      bloodySprites_41: 795406291
+      bloodySprites_42: -1727622239
+      bloodySprites_43: 1342703519
+      bloodySprites_44: 1000773750
+      bloodySprites_45: 1698402035
+      bloodySprites_46: -86738590
+      bloodySprites_47: 1835587055
+      bloodySprites_49: -1456762958
+      bloodySprites_5: -23564040
+      bloodySprites_50: -881155175
+      bloodySprites_51: -988144280
+      bloodySprites_52: 1336885965
+      bloodySprites_53: 1862817168
+      bloodySprites_54: -1705809822
+      bloodySprites_55: -764388534
+      bloodySprites_56: -126763085
+      bloodySprites_57: -478376261
+      bloodySprites_58: -1727054341
+      bloodySprites_59: 1300192030
+      bloodySprites_6: -2105906445
+      bloodySprites_60: 2122170193
+      bloodySprites_61: -76199780
+      bloodySprites_62: 765919315
+      bloodySprites_63: -1443722878
+      bloodySprites_64: 1620575950
+      bloodySprites_65: -858329110
+      bloodySprites_66: 975859574
+      bloodySprites_67: 112158316
+      bloodySprites_68: 1463398778
+      bloodySprites_69: 461577738
+      bloodySprites_7: 2089177899
+      bloodySprites_70: 269854979
+      bloodySprites_71: 651489156
+      bloodySprites_72: 1199167234
+      bloodySprites_73: 1007838481
+      bloodySprites_74: 457167630
+      bloodySprites_76: 574382577
+      bloodySprites_77: 922204823
+      bloodySprites_78: 1057352617
+      bloodySprites_79: 992209453
+      bloodySprites_8: 637567914
+      bloodySprites_80: 1737979225
+      bloodySprites_81: -866336353
+      bloodySprites_82: 190019248
+      bloodySprites_83: -1575891276
+      bloodySprites_84: 114396033
+      bloodySprites_85: -1431540162
+      bloodySprites_86: 1940373772
+      bloodySprites_9: 27765056
+      bloodySprites_96: -2004972222
+      marksprite_0: -310733692
+      marksprite_1: -201331962
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

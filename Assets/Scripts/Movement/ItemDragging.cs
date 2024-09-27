@@ -123,7 +123,7 @@ public class ItemDragging : MonoBehaviour
                 
                 
                 this.transform.parent = null;
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -3f);
+                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0f);
                 this.transform.rotation = Quaternion.Euler(-30, 0, 0);
                 isHeld = true;
                 //this.transform.LookAt(cameraPos);
