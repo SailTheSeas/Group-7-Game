@@ -9,6 +9,7 @@ public class Stain : MonoBehaviour
     [SerializeField] private int score;
 
     private ItemManager manager;
+    private MouseStateManager MSM;
     private ScoreCounter SC;
 
     private Progressbar progressBar;
@@ -20,12 +21,13 @@ public class Stain : MonoBehaviour
         progress = 0;
         manager = FindObjectOfType<ItemManager>();
         SC = FindObjectOfType<ScoreCounter>();
+        MSM = FindObjectOfType<MouseStateManager>();
         progressBar = GameObject.FindGameObjectWithTag("ProgressBar").GetComponent<Progressbar>();
     }
 
     private void OnMouseEnter()
     {
-        if (!manager.GetHoldingState())
+        if (MSM.GetMouseState() != MouseState.none && MSM.GetMouseState() != MouseState.drag)
         {
             
             progressBar.SetState(true);
@@ -49,7 +51,7 @@ public class Stain : MonoBehaviour
         {
             if (progress <= maxProgress)
             {
-                progress +=  200*Time.deltaTime;
+                progress += MSM.GetRateOfCleaing()* Time.deltaTime;
                 progressBar.SetProgress(progress, maxProgress);
             } else
             {

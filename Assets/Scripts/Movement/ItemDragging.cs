@@ -23,6 +23,7 @@ public class ItemDragging : MonoBehaviour
     private bool canBePlaced;
 
     private ItemManager itemManager;
+    private MouseStateManager MSM;
 
   
 
@@ -92,6 +93,7 @@ public class ItemDragging : MonoBehaviour
         isHeld = false;
         RB = GetComponent<Rigidbody>();
         itemManager = FindObjectOfType<ItemManager>();
+        MSM = FindObjectOfType<MouseStateManager>();
         /*cameraPos = FindObjectOfType<Camera>().GetComponent<Transform>();*/
         StartCoroutine(FreezeObject(2f));
     }
@@ -105,28 +107,31 @@ public class ItemDragging : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
-        if (isHeld)
+        if (MSM.GetMouseState() == MouseState.drag)
         {
-            PlaceItem();
-        } else
-        {
-            if (!itemManager.GetHoldingState())
+            if (isHeld)
             {
-                itemManager.SetHoldingState(true);
-                itemManager.SetHoldingItem(this);
-                RB.useGravity = false;
-                RB.constraints = RigidbodyConstraints.FreezeRotation;
-                mousePosition = Input.mousePosition - GetMousePosition();
-                if (hoveredSpot != null)
-                    hoveredSpot.SetIsUsed(false);
-                
-                
-                this.transform.parent = null;
-                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0f);
-                this.transform.rotation = Quaternion.Euler(-30, 0, 0);
-                isHeld = true;
-                //this.transform.LookAt(cameraPos);
+                PlaceItem();
+            }
+            else
+            {
+                if (!itemManager.GetHoldingState())
+                {
+                    itemManager.SetHoldingState(true);
+                    itemManager.SetHoldingItem(this);
+                    RB.useGravity = false;
+                    RB.constraints = RigidbodyConstraints.FreezeRotation;
+                    mousePosition = Input.mousePosition - GetMousePosition();
+                    if (hoveredSpot != null)
+                        hoveredSpot.SetIsUsed(false);
+
+
+                    this.transform.parent = null;
+                    this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0f);
+                    this.transform.rotation = Quaternion.Euler(-30, 0, 0);
+                    isHeld = true;
+                    //this.transform.LookAt(cameraPos);
+                }
             }
         }
     }
@@ -140,14 +145,15 @@ public class ItemDragging : MonoBehaviour
                 -3);
         } else
         {
-            if (Physics.Raycast(transform.position,Vector3.down,(transform.localScale.y/2)+ transform.localScale.y/10, floorLayer))
+            RB.constraints = RigidbodyConstraints.None;
+            /*if (Physics.Raycast(transform.position,Vector3.down,(transform.localScale.y/2)+ transform.localScale.y/10, floorLayer))
             {
                 RB.constraints = RigidbodyConstraints.FreezeAll;
                 this.transform.localRotation = Quaternion.Euler(0, this.transform.localRotation.eulerAngles.y,0);
             } else
             {
-                RB.constraints = RigidbodyConstraints.None;
-            }
+                
+            }*/
         }
 
     }
