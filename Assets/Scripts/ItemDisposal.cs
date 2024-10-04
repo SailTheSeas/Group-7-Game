@@ -44,6 +44,7 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         if (IM.GetHoldingState())
         {
             MSM.SetMouseState(1);
+            IM.SetHoldingState(false);
             isHovered = false;
             item = null;
         }
