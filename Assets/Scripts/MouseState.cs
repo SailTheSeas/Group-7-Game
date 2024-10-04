@@ -45,6 +45,9 @@ public class MouseStateManager : MonoBehaviour
                 mouseState = MouseState.cleanStrong;
                 rateOfCleaning = fastCleaning;
                 break;
+            case 5:
+                mouseState = MouseState.delete;
+                break;
             default:
                 break;
         }
@@ -60,4 +63,5 @@ public enum MouseState
     cleanWeak,
     cleanMedium,
     cleanStrong,
+    delete,
 }

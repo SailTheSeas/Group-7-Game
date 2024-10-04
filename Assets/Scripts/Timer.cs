@@ -16,7 +16,10 @@ public class Timer : MonoBehaviour
         totalTime -= Time.deltaTime;
         displayMinutes = Mathf.FloorToInt(totalTime / 60);
         displaySeconds = Mathf.FloorToInt(totalTime % 60);
-        timerDisp.text = displayMinutes.ToString() + ":" + displaySeconds.ToString();
+        if (displaySeconds > 9)
+            timerDisp.text = displayMinutes.ToString() + ":" + displaySeconds.ToString();
+        else
+            timerDisp.text = displayMinutes.ToString() + ":0" + displaySeconds.ToString();
 
         if (totalTime <= 0f)
         {

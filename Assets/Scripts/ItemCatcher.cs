@@ -13,6 +13,7 @@ public class ItemCatcher : MonoBehaviour
         {
             other.transform.parent = roomManager.GetCurrentRoom().transform;
             other.transform.localPosition = resetPosition;
+            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 }

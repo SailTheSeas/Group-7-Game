@@ -22,6 +22,11 @@ public class ItemManager : MonoBehaviour
         return isHolding;
     }
 
+    public ItemDragging GetHeldItemObject()
+    {
+        return heldItem;
+    }
+
     private void Start()
     {
         isHolding = false;

@@ -27,7 +27,7 @@ public class Stain : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (MSM.GetMouseState() != MouseState.none && MSM.GetMouseState() != MouseState.drag)
+        if (MSM.GetMouseState() == MouseState.cleanMedium && MSM.GetMouseState() == MouseState.cleanWeak && MSM.GetMouseState() == MouseState.cleanStrong)
         {
             
             progressBar.SetState(true);

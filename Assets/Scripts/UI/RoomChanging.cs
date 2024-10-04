@@ -43,7 +43,7 @@ public class RoomChanging : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     IEnumerator ChangeRoom()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0f);
         display.color = Color.white;
         roomManager.ChangeRoom(dir);    
     }

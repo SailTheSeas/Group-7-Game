@@ -9,6 +9,7 @@ public class ItemPlacementSpot : MonoBehaviour
     [SerializeField] private GameObject room;
     [SerializeField] private ItemClass sizeCanFit;
     [SerializeField] private string itemId;
+    [SerializeField] private bool freezeObject;
 
     private ItemDragging item;
     private bool isUsed;
@@ -82,6 +83,11 @@ public class ItemPlacementSpot : MonoBehaviour
     public GameObject GetRoom()
     {
         return room;
+    }
+
+    public bool GetIsFreeze()
+    {
+        return freezeObject;
     }
 
     private void OnMouseEnter()

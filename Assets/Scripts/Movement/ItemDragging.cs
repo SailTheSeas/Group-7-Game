@@ -25,7 +25,12 @@ public class ItemDragging : MonoBehaviour
     private ItemManager itemManager;
     private MouseStateManager MSM;
 
-  
+    private bool freeze;
+
+    public void DestroyObject()
+    {
+        Destroy(this.gameObject);
+    }
 
     public void SetScore(int newScore)
     {
@@ -77,6 +82,11 @@ public class ItemDragging : MonoBehaviour
             this.transform.localRotation = Quaternion.Euler(hoveredSpot.GetRotation());
             this.transform.parent = hoveredSpot.GetRoom().transform;
             this.transform.localPosition = hoveredSpot.GetPosition();
+            if (hoveredSpot.GetIsFreeze())
+            {
+                RB.constraints = RigidbodyConstraints.FreezeAll;
+                freeze = true;
+            }
             hoveredSpot.SetIsUsed(true);
             //StartCoroutine(FreezeObject(0.75f));
         }
@@ -91,6 +101,7 @@ public class ItemDragging : MonoBehaviour
         floorLayer = LayerMask.GetMask("Floor");
         canBePlaced = false;
         isHeld = false;
+        freeze = false;
         RB = GetComponent<Rigidbody>();
         itemManager = FindObjectOfType<ItemManager>();
         MSM = FindObjectOfType<MouseStateManager>();
@@ -123,12 +134,17 @@ public class ItemDragging : MonoBehaviour
                     RB.constraints = RigidbodyConstraints.FreezeRotation;
                     mousePosition = Input.mousePosition - GetMousePosition();
                     if (hoveredSpot != null)
+                    {
                         hoveredSpot.SetIsUsed(false);
+                        
+                    }
 
 
                     this.transform.parent = null;
                     this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0f);
                     this.transform.rotation = Quaternion.Euler(-30, 0, 0);
+                    RB.velocity = Vector3.zero;
+                    freeze = false;
                     isHeld = true;
                     //this.transform.LookAt(cameraPos);
                 }
@@ -145,7 +161,8 @@ public class ItemDragging : MonoBehaviour
                 -3);
         } else
         {
-            RB.constraints = RigidbodyConstraints.None;
+            if (!freeze)
+                RB.constraints = RigidbodyConstraints.None;
             /*if (Physics.Raycast(transform.position,Vector3.down,(transform.localScale.y/2)+ transform.localScale.y/10, floorLayer))
             {
                 RB.constraints = RigidbodyConstraints.FreezeAll;
