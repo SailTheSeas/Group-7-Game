@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private float totalTime;
     [SerializeField] private TMP_Text timerDisp;
+    [SerializeField] private ScoreCounter SC;
 
     private int displayMinutes;
     private int displaySeconds;
@@ -29,6 +30,6 @@ public class Timer : MonoBehaviour
 
     private void TimerEnd()
     {
-        Debug.Log("Time over");
+        SC.EndGame();
     }
 }

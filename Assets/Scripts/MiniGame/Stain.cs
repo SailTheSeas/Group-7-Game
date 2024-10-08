@@ -27,7 +27,7 @@ public class Stain : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (MSM.GetMouseState() == MouseState.cleanMedium && MSM.GetMouseState() == MouseState.cleanWeak && MSM.GetMouseState() == MouseState.cleanStrong)
+        if (MSM.GetMouseState() == MouseState.cleanMedium || MSM.GetMouseState() == MouseState.cleanWeak || MSM.GetMouseState() == MouseState.cleanStrong)
         {
             
             progressBar.SetState(true);
@@ -37,12 +37,18 @@ public class Stain : MonoBehaviour
 
     private void OnMouseDown()
     {
-        canClean = true;
+        if (MSM.GetMouseState() == MouseState.cleanMedium || MSM.GetMouseState() == MouseState.cleanWeak || MSM.GetMouseState() == MouseState.cleanStrong)
+        {
+            canClean = true;
+        }
     }
 
     private void OnMouseUp()
     {
-        canClean = false;
+        if (MSM.GetMouseState() == MouseState.cleanMedium || MSM.GetMouseState() == MouseState.cleanWeak || MSM.GetMouseState() == MouseState.cleanStrong)
+        {
+            canClean = false;
+        }
     }
 
     private void OnMouseOver()
@@ -52,6 +58,7 @@ public class Stain : MonoBehaviour
             if (progress <= maxProgress)
             {
                 progress += MSM.GetRateOfCleaing()* Time.deltaTime;
+                MSM.UseDetergent();
                 progressBar.SetProgress(progress, maxProgress);
             } else
             {
@@ -65,6 +72,9 @@ public class Stain : MonoBehaviour
 
     private void OnMouseExit()
     {
-        progressBar.SetState(false);
+        if (MSM.GetMouseState() == MouseState.cleanMedium || MSM.GetMouseState() == MouseState.cleanWeak || MSM.GetMouseState() == MouseState.cleanStrong)
+        {
+            progressBar.SetState(false);
+        }
     }
 }

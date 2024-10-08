@@ -30,7 +30,7 @@ public class WorldObject : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (MSM.GetMouseState() == MouseState.drag) ;
+        if (MSM.GetMouseState() == MouseState.drag)
         {
             progress = 0;
             progressBar.SetState(true);
@@ -49,12 +49,20 @@ public class WorldObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        isPressed = true;
+        if (MSM.GetMouseState() == MouseState.drag)
+        {
+            isPressed = true;
+        }
     }
 
     private void OnMouseUp()
     {
-        isPressed = false;
+        if (MSM.GetMouseState() == MouseState.drag)
+        {
+            isPressed = false;
+            progress = 0;
+            progressBar.SetProgress(0, maxProgress);
+        }
     }
 
     private void OnMouseOver()
@@ -85,6 +93,7 @@ public class WorldObject : MonoBehaviour
                         SC.UpdateScore(-1 * score);
                     }
                     progressBar.SetState(false);
+                    progress = 0;
                 }
 
             }
