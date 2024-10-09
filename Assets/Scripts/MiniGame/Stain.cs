@@ -7,19 +7,20 @@ public class Stain : MonoBehaviour
 {
     [SerializeField] private int maxProgress;
     [SerializeField] private int score;
+    [SerializeField] private MouseState requiredType;
 
-    private ItemManager manager;
+    
     private MouseStateManager MSM;
     private ScoreCounter SC;
 
     private Progressbar progressBar;
     private float progress;
-    private bool canClean;
+    private bool canClean, isRuined;
 
     private void Start()
     {
         progress = 0;
-        manager = FindObjectOfType<ItemManager>();
+        isRuined = false;
         SC = FindObjectOfType<ScoreCounter>();
         MSM = FindObjectOfType<MouseStateManager>();
         progressBar = GameObject.FindGameObjectWithTag("ProgressBar").GetComponent<Progressbar>();
@@ -53,20 +54,33 @@ public class Stain : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (canClean)
+        if (!isRuined)
         {
-            if (progress <= maxProgress)
+            if (canClean)
             {
-                progress += MSM.GetRateOfCleaing()* Time.deltaTime;
-                MSM.UseDetergent();
-                progressBar.SetProgress(progress, maxProgress);
-            } else
-            {
-                SC.UpdateScore(score);
-                this.gameObject.SetActive(false);
-                progressBar.SetState(false);
+                if (MSM.GetMouseState() >= requiredType)
+                {
+                    if (progress <= maxProgress)
+                    {
+                        progress += MSM.GetRateOfCleaing() * Time.deltaTime;
+                        MSM.UseDetergent();
+                        progressBar.SetProgress(progress, maxProgress);
+                    }
+                    else
+                    {
+                        SC.UpdateScore(score);
+                        this.gameObject.SetActive(false);
+                        progressBar.SetState(false);
+                    }
+                }
+                else
+                {
+                    SpriteRenderer sp = GetComponent<SpriteRenderer>();
+                    sp.color = Color.black;
+                    isRuined = true;
+                }
+
             }
-            
         }
     }
 
