@@ -33,8 +33,7 @@ public class ScoreCounter : MonoBehaviour
     private int CalculateScore()
     {
         int rating = 0;
-        float completion = currentScore / totalScore * 100;
-  
+        float completion = (currentScore / (float)totalScore) * 100;       
         if (completion <= 0)
         {
             rating = 0;
