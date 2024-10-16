@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
+using System;
 
 public class TextHandler : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class TextHandler : MonoBehaviour
     [SerializeField] private float textCharacterDelay;
     [SerializeField] private string typingChar;
     [SerializeField] private bool hasTypingChar;
+    [SerializeField] private string levelScene;
+    [SerializeField] private GameObject nextLevelButton;
 
     private string[] dialogueLines;
     private bool isTyping, startBattle, canClick;
@@ -32,6 +35,7 @@ public class TextHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         dialogueTracker = 0;
         totalDialogue = dialogue.GetTotalDialogueCount();
         dialogueLines = dialogue.GetDialogueLines();
@@ -76,7 +80,7 @@ public class TextHandler : MonoBehaviour
                 }
                 else
                 {
-
+                    nextLevelButton.SetActive(true);
                     Debug.Log("The End");
                 }
             }
@@ -89,6 +93,12 @@ public class TextHandler : MonoBehaviour
         }
     }
    
+
+    public void NextLevel()
+    {
+        SceneManager.LoadSceneAsync(levelScene);
+    }
+
     IEnumerator TypeTMP()
     {
         if (hasTypingChar)

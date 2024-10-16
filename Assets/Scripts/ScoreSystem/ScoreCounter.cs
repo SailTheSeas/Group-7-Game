@@ -11,6 +11,8 @@ public class ScoreCounter : MonoBehaviour
     [SerializeField] private TMP_Text finishText;
     [SerializeField] private GameObject endDisplay; 
     [SerializeField] private int currentScore;
+
+    private MouseStateManager MSM;
     public void UpdateScore(int scoreChange)
     {
         currentScore += scoreChange;
@@ -19,11 +21,13 @@ public class ScoreCounter : MonoBehaviour
 
     private void Start()
     {
+        MSM = FindObjectOfType<MouseStateManager>();
         currentScore = 0;
     }
 
     public void EndGame()
     {
+        MSM.SetMouseState(0);
         endDisplay.SetActive(true);
         finishText.text = CalculateScore().ToString();
         Time.timeScale = 0f;

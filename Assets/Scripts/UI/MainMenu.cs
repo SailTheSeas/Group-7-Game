@@ -7,11 +7,12 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject HTP;
     [SerializeField] private GameObject Credits;
+    [SerializeField] private GameObject LevelSelect;
+    [SerializeField] private string[] levels;
 
-
-    public void LoadGame()
+    public void LoadGame(int index)
     {
-        SceneManager.LoadScene("WorldScene");
+        SceneManager.LoadSceneAsync(levels[index]);
     }
 
     public void ToggleHTP(bool state)
@@ -22,6 +23,11 @@ public class MainMenu : MonoBehaviour
     public void ToggleCredits(bool state)
     {
         Credits.SetActive(state);       
+    }
+
+    public void ToggleLevels(bool state)
+    {
+        LevelSelect.SetActive(state);
     }
 
 

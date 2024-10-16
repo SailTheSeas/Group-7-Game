@@ -1,10 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
-    [SerializeField] private string menuScene, MainScene;
+    [SerializeField] private string menuScene, thisScene;
+    [SerializeField] private string nextScene;
     private MouseStateManager MSM;
     private MouseState prevousState;
     private bool isPaused;
@@ -16,6 +18,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         pauseScreen.SetActive(false);
         MSM = FindObjectOfType<MouseStateManager>();
+        thisScene = SceneManager.GetActiveScene().name;
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = true;
     }
@@ -32,7 +35,7 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(MainScene);
+        SceneManager.LoadSceneAsync(thisScene);
     }
 
     public void PauseGame()
@@ -80,7 +83,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene(menuScene);
+        SceneManager.LoadSceneAsync(menuScene);
     }
 
     public void Quit()
@@ -88,9 +91,9 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void LoadWorldScene()
+    public void NextLevel()
     {
-
-        SceneManager.LoadScene("worldScene");
+        SceneManager.LoadSceneAsync(nextScene);
     }
+
 }
