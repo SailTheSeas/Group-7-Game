@@ -10,6 +10,8 @@ public class WorldObject : MonoBehaviour
     [SerializeField] private Vector3 swapRotation;
     [SerializeField] private int maxProgress;
     [SerializeField] private int score;
+    private Texture2D open, close;
+    private Vector2 cursorHotspot;
     private ScoreCounter SC;
     private MouseStateManager MSM;
     private Vector3 startPosition, startRotation;
@@ -26,6 +28,8 @@ public class WorldObject : MonoBehaviour
         isMoved = false;
         startPosition = this.transform.localPosition;  
         startRotation = this.transform.rotation.eulerAngles;
+        open = MSM.GetOpenHand();
+        close = MSM.GetCloseHand();
     }
 
     private void OnMouseEnter()
@@ -52,6 +56,8 @@ public class WorldObject : MonoBehaviour
         if (MSM.GetMouseState() == MouseState.drag)
         {
             isPressed = true;
+            cursorHotspot = new Vector2(close.width / 2, close.height / 2);
+            Cursor.SetCursor(close, cursorHotspot, CursorMode.Auto);
         }
     }
 
@@ -62,6 +68,8 @@ public class WorldObject : MonoBehaviour
             isPressed = false;
             progress = 0;
             progressBar.SetProgress(0, maxProgress);
+            cursorHotspot = new Vector2(open.width / 2, open.height / 2);
+            Cursor.SetCursor(open, cursorHotspot, CursorMode.Auto);
         }
     }
 
@@ -92,7 +100,7 @@ public class WorldObject : MonoBehaviour
                         isMoved = false;
                         SC.UpdateScore(-1 * score);
                     }
-                    progressBar.SetState(false);
+                    //progressBar.SetState(false);
                     progress = 0;
                 }
 

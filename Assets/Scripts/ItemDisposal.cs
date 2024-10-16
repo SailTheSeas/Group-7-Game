@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
     private ItemManager IM;
     private MouseStateManager MSM;
     private ItemDragging item;
-
+    private int previousState;
     private bool isHovered;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,9 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
+        pointerEventData.pointerPress = gameObject;
+
+        previousState = MSM.GetMouseStateInt();
         if (IM.GetHoldingState())
         {
             MSM.SetMouseState(5);
@@ -28,26 +31,41 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         }
     }
 
-    public void OnPointerClick(PointerEventData pointerEventData)
+    /*    public void OnPointerClick(PointerEventData pointerEventData)
+        {
+            if (isHovered)
+            {
+                //Debug.Log(item);
+                *//*Destroy(item.gameObject);*//*
+                item.DestroyObject();
+            }
+
+        }*/
+
+    public void OnPointerDown(PointerEventData eventData)
     {
+        
+    }
+
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        
         if (isHovered)
         {
-            //Debug.Log(item);
-            /*Destroy(item.gameObject);*/
             item.DestroyObject();
+            IM.SetHoldingState(false);
+            isHovered = false;
+            item = null;
+            MSM.SetMouseState(previousState);
         }
-
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        if (IM.GetHoldingState())
-        {
-            MSM.SetMouseState(1);
-            IM.SetHoldingState(false);
-            isHovered = false;
-            item = null;
-        }
+        MSM.SetMouseState(previousState);
+        //IM.SetHoldingState(false);
+
     }
 
 }

@@ -120,36 +120,63 @@ public class ItemDragging : MonoBehaviour
     {
         if (MSM.GetMouseState() == MouseState.drag)
         {
-            if (isHeld)
+            /*            if (isHeld)
+                        {
+                            PlaceItem();
+                        }
+                        else
+                        {
+                            if (!itemManager.GetHoldingState())
+                            {
+                                itemManager.SetHoldingState(true);
+                                itemManager.SetHoldingItem(this);
+                                RB.useGravity = false;
+                                RB.constraints = RigidbodyConstraints.FreezeRotation;
+                                mousePosition = Input.mousePosition - GetMousePosition();
+                                if (hoveredSpot != null)
+                                {
+                                    hoveredSpot.SetIsUsed(false);
+
+                                }
+
+
+                                this.transform.parent = null;
+                                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0f);
+                                this.transform.rotation = Quaternion.Euler(-30, 0, 0);
+                                RB.velocity = Vector3.zero;
+                                freeze = false;
+                                isHeld = true;
+                                //this.transform.LookAt(cameraPos);
+                            }
+                        }*/
+            if (!itemManager.GetHoldingState())
             {
-                PlaceItem();
-            }
-            else
-            {
-                if (!itemManager.GetHoldingState())
+                itemManager.SetHoldingState(true);
+                itemManager.SetHoldingItem(this);
+                RB.useGravity = false;
+                RB.constraints = RigidbodyConstraints.FreezeRotation;
+                mousePosition = Input.mousePosition - GetMousePosition();
+                if (hoveredSpot != null)
                 {
-                    itemManager.SetHoldingState(true);
-                    itemManager.SetHoldingItem(this);
-                    RB.useGravity = false;
-                    RB.constraints = RigidbodyConstraints.FreezeRotation;
-                    mousePosition = Input.mousePosition - GetMousePosition();
-                    if (hoveredSpot != null)
-                    {
-                        hoveredSpot.SetIsUsed(false);
-                        
-                    }
+                    hoveredSpot.SetIsUsed(false);
 
-
-                    this.transform.parent = null;
-                    this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0f);
-                    this.transform.rotation = Quaternion.Euler(-30, 0, 0);
-                    RB.velocity = Vector3.zero;
-                    freeze = false;
-                    isHeld = true;
-                    //this.transform.LookAt(cameraPos);
                 }
+
+
+                this.transform.parent = null;
+                this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0f);
+                this.transform.rotation = Quaternion.Euler(-30, 0, 0);
+                RB.velocity = Vector3.zero;
+                freeze = false;
+                isHeld = true;
+                //this.transform.LookAt(cameraPos);
             }
         }
+    }
+
+    private void OnMouseUp()
+    {
+        PlaceItem();
     }
 
     private void FixedUpdate()

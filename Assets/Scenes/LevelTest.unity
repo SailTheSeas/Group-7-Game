@@ -3170,6 +3170,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1788245417}
     - target: {fileID: 4428763693440023340, guid: 6f0b6977b6e1d054294424a468c77c33, type: 3}
+      propertyPath: freezeObject
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428763693440023340, guid: 6f0b6977b6e1d054294424a468c77c33, type: 3}
       propertyPath: positionOfItem.x
       value: 0.79168665
       objectReference: {fileID: 0}
@@ -4120,6 +4124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c265d6308c62a841b972a737742b16a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  open: {fileID: 2800000, guid: b699559ec85952442b28428b6422bddc, type: 3}
+  close: {fileID: 2800000, guid: f4357ff833b879a459af2acf010f57db, type: 3}
 --- !u!114 &913044144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4157,6 +4163,7 @@ MonoBehaviour:
   detBCapacity: 500
   drag: {fileID: 2800000, guid: b699559ec85952442b28428b6422bddc, type: 3}
   clean: {fileID: 2800000, guid: 1a38773e66929d2468f2cbf364e88064, type: 3}
+  close: {fileID: 2800000, guid: f4357ff833b879a459af2acf010f57db, type: 3}
   detAHolder: {fileID: 353741006}
   detBHolder: {fileID: 139787703}
   detASlider: {fileID: 1419251671}

@@ -8,14 +8,16 @@ public class MouseStateManager : MonoBehaviour
     [SerializeField] private MouseState mouseState;
     [SerializeField] private int slowCleaning, mediumCleaning, fastCleaning;
     [SerializeField] private float detACapacity, detBCapacity;
-    [SerializeField] private Texture2D drag, clean;
+    [SerializeField] private Texture2D drag, clean, close;
     [SerializeField] private GameObject detAHolder, detBHolder;
     [SerializeField] private Slider detASlider, detBSlider;
+    private ItemManager IM;
     private Vector2 cursorHotspot;
     private int rateOfCleaning;
     // Start is called before the first frame update
     void Start()
     {
+        IM = FindObjectOfType<ItemManager>();
         mouseState = MouseState.drag;
         cursorHotspot = new Vector2(drag.width / 2, drag.height / 2);
         Cursor.SetCursor(drag, cursorHotspot, CursorMode.Auto);
@@ -32,9 +34,42 @@ public class MouseStateManager : MonoBehaviour
         return mouseState;
     }
 
+    public int GetMouseStateInt()
+    {
+        switch (mouseState)
+        {
+            case MouseState.none:
+                return 0;              
+            case MouseState.drag:
+                return 1;            
+            case MouseState.clean:
+                return 2;              
+            case MouseState.cleanWeak:
+                return 2;              
+            case MouseState.cleanMedium:
+                return 3;               
+            case MouseState.cleanStrong:
+                return 4;               
+            case MouseState.delete:
+                return 5;                
+            default:
+                return 0;               
+        }
+    }
+
     public int GetRateOfCleaing()
     {
         return rateOfCleaning;
+    }
+
+    public Texture2D GetOpenHand()
+    {
+        return drag;
+    }
+
+    public Texture2D GetCloseHand()
+    {
+        return close;
     }
 
     public void SetMouseState(int index)
@@ -47,8 +82,15 @@ public class MouseStateManager : MonoBehaviour
                 break;
             case 1:
                 mouseState = MouseState.drag;
-                cursorHotspot = new Vector2(drag.width / 2, drag.height / 2);
-                Cursor.SetCursor(drag, cursorHotspot, CursorMode.Auto);
+                if (IM.GetHoldingState())
+                {
+                    cursorHotspot = new Vector2(close.width / 2, close.height / 2);
+                    Cursor.SetCursor(close, cursorHotspot, CursorMode.Auto);
+                } else
+                {
+                    cursorHotspot = new Vector2(drag.width / 2, drag.height / 2);
+                    Cursor.SetCursor(drag, cursorHotspot, CursorMode.Auto);
+                }
 
                 break;
             case 2:
