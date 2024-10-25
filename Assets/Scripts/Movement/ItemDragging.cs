@@ -6,7 +6,9 @@ public class ItemDragging : MonoBehaviour
 {
     [SerializeField] private ItemClass itemSize;
     [SerializeField] private string itemID;
+    [SerializeField] private AudioClip placeClip, upClip;
 
+    private AudioSource audioSource;
 
     private int tempScore;
 
@@ -78,7 +80,11 @@ public class ItemDragging : MonoBehaviour
         this.transform.parent = FindObjectOfType<Rooms>().GetCurrentRoom().transform;
         if (canBePlaced)
         {
-
+            if (placeClip != null)
+            {
+                audioSource.Stop();
+                audioSource.PlayOneShot(placeClip);
+            }
             this.transform.localRotation = Quaternion.Euler(hoveredSpot.GetRotation());
             this.transform.parent = hoveredSpot.GetRoom().transform;
             this.transform.localPosition = hoveredSpot.GetPosition();
@@ -98,6 +104,7 @@ public class ItemDragging : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         floorLayer = LayerMask.GetMask("Floor");
         canBePlaced = false;
         isHeld = false;
@@ -169,6 +176,11 @@ public class ItemDragging : MonoBehaviour
                 RB.velocity = Vector3.zero;
                 freeze = false;
                 isHeld = true;
+                if (placeClip != null)
+                {
+                    audioSource.Stop();
+                    audioSource.PlayOneShot(upClip);
+                }
                 //this.transform.LookAt(cameraPos);
             }
         }
