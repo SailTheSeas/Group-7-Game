@@ -1006,7 +1006,7 @@ MonoBehaviour:
   textCharacterDelay: 0.08
   typingChar: '|'
   hasTypingChar: 1
-  levelScene: LevelTest
+  levelScene: Level1
   nextLevelButton: {fileID: 431117795}
 --- !u!4 &1108255928
 Transform:
