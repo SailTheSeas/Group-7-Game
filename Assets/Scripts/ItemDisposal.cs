@@ -30,18 +30,6 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             item = IM.GetHeldItemObject();
         }
     }
-
-    /*    public void OnPointerClick(PointerEventData pointerEventData)
-        {
-            if (isHovered)
-            {
-                //Debug.Log(item);
-                *//*Destroy(item.gameObject);*//*
-                item.DestroyObject();
-            }
-
-        }*/
-
     public void OnPointerDown(PointerEventData eventData)
     {
         
