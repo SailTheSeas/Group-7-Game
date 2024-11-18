@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1096356896630352709, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1323698146187353818, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -254,6 +258,10 @@ PrefabInstance:
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: positions.Array.data[0].z
       value: -31.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424223213610725611, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8402067006948540350, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: nextScene
