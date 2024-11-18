@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 125cb3a567c8c9444b2a2cdb49d2d3e7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sour Gummy SemiExpanded
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 703c78a24bcbb184b848ddba0187defe, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
