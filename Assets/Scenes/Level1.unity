@@ -5467,6 +5467,10 @@ PrefabInstance:
       propertyPath: rooms.Array.data[2]
       value: 
       objectReference: {fileID: 1788245417}
+    - target: {fileID: 7424223213610725611, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
