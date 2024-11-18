@@ -271,6 +271,10 @@ PrefabInstance:
       propertyPath: positions.Array.data[1].z
       value: -31.42
       objectReference: {fileID: 0}
+    - target: {fileID: 7707796716880804545, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8402067006948540350, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: nextScene
       value: Dialogue3

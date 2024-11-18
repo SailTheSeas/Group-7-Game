@@ -11,6 +11,8 @@ public class ScoreCounter : MonoBehaviour
     [SerializeField] private TMP_Text finishText;
     [SerializeField] private GameObject endDisplay; 
     [SerializeField] private int currentScore;
+    [SerializeField] private SaveData SD;
+    [SerializeField] private int level;
 
     private MouseStateManager MSM;
     public void UpdateScore(int scoreChange)
@@ -29,6 +31,7 @@ public class ScoreCounter : MonoBehaviour
     {
         MSM.SetMouseState(0);
         endDisplay.SetActive(true);
+        
         finishText.text = CalculateScore().ToString();
         Time.timeScale = 0f;
         
@@ -47,14 +50,20 @@ public class ScoreCounter : MonoBehaviour
         } else if (completion > 33 && completion < 80)
         {
             rating = 2;
+            
+            SD.SetLevelUnlock(level);
         } else if (completion >= 80 && completion < 100)
         {
             rating = 3;
+            SD.SetLevelUnlock(level);
         } else if (completion >= 100)
         {
             rating = 4;
+            SD.SetLevelUnlock(level);
         }
-        
+
+        if (SD.GetLevelScore(level) < rating)
+            SD.SetLevelScore(level, rating);
         return rating;
     }
 }

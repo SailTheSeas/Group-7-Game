@@ -29,5 +29,14 @@ public class SaveData : ScriptableObject
         return levelUnlocked[index];
     }
 
+    public void SetLevelScore(int index, float value)
+    {
+        levelScore[index] = value;
+    }
+
+    public void SetLevelUnlock(int index)
+    {
+        levelUnlocked[index] = true;
+    }
 
 }
