@@ -1,9 +1,44 @@
 fileFormatVersion: 2
-guid: 74098dd0c1ffec848b260b3a9a7488ca
+guid: d90e1c70eb0c03e40988c1855ee2b2e6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Computer
+    second: {fileID: 2100000, guid: b3e7db1f95f71674bbdcec2a2ea65829, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cupboard
+    second: {fileID: 2100000, guid: 25db312eda5a02042a04eb01ff6e899a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handles
+    second: {fileID: 2100000, guid: bb4d8e079857cdb47936b163e95112ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 5697890d2f92b0e4d9ee0c1c6b732e2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PatientFiles
+    second: {fileID: 2100000, guid: 8e996fff66f5f66419ca34d8bb46b935, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: 8e8b49f9eafc8bc44bbee85cc0209e12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheels
+    second: {fileID: 2100000, guid: 6640a2f69d8be2847b77bf560bdab3c0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

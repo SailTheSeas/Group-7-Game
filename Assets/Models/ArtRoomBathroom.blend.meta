@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 506c09fef5a659f48a5b513044014061
+guid: 74098dd0c1ffec848b260b3a9a7488ca
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,73 +7,98 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Couch
-    second: {fileID: 2100000, guid: 75ec8fda21944a944b02c4501888d9d4, type: 2}
+      name: Cup
+    second: {fileID: 2100000, guid: f265862665566bd4fa5854e129fc7905, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cupboard
-    second: {fileID: 2100000, guid: b6ee62835a2061c4ea92723f0c8da7e1, type: 2}
+    second: {fileID: 2100000, guid: 1b088f9cd6b6f044782965aeef193478, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Cupboard.001
-    second: {fileID: 2100000, guid: 1dca60fe6b74bcf45b95b6085f2d5de1, type: 2}
+      name: Floor
+    second: {fileID: 2100000, guid: b69ec0577abb67445941ba454e8504af, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Leaf
-    second: {fileID: 2100000, guid: 5e3962fc8397dc649b499e16c08dbac4, type: 2}
+    second: {fileID: 2100000, guid: f4d1a5f6476f5cd41a6af33d41f6156e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf.001
+    second: {fileID: 2100000, guid: 1ead160d09756104e913fdd7f1b51436, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf.002
+    second: {fileID: 2100000, guid: cdc9540839af9f54d8be4133ca8503f8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: 7916f6ae6ba644748b4c2855d2cf1ef2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 5f03e820f1d04b741bafd6801730b34e, type: 2}
+    second: {fileID: 2100000, guid: 8653319bdda06de4a8f316ee51bdb640, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.002
-    second: {fileID: 2100000, guid: f66f20eaca86b7642b0631dab1c1893b, type: 2}
+    second: {fileID: 2100000, guid: a9b3475d874366646abd7e26d780faa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 04397bfb1336c5649aa99f7d4ebcfa81, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.004
-    second: {fileID: 2100000, guid: 3e0a8b4f695af4c4a8eba9719b7b8441, type: 2}
+    second: {fileID: 2100000, guid: 05f224f091d1cf14680d5c5dc720d114, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal
-    second: {fileID: 2100000, guid: 2e01f0c654417c54e91b7e6c3a832d2b, type: 2}
+      name: Material.005
+    second: {fileID: 2100000, guid: 3e6ad189e2f25f54ba60a6d85f96dfa9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: be6234d3b0cac28408ecf2d5162a838e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Painting
-    second: {fileID: 2100000, guid: 95f76294530938b4fbc8169ab6abf9b7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pillow
-    second: {fileID: 2100000, guid: b006980be9ea03f4ca1fed2368b02eb5, type: 2}
+    second: {fileID: 2100000, guid: 432a907a16baf05449e7b076e25074bf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Pot
-    second: {fileID: 2100000, guid: 4e0f2c83b0b839143a491f2201c33fac, type: 2}
+    second: {fileID: 2100000, guid: 1aa7897a542da294dac5c2d2e8880ac7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pot.001
+    second: {fileID: 2100000, guid: cf5ec9ddd03e0cb4caa098afda877136, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pot.002
+    second: {fileID: 2100000, guid: 295dfdf37ddc8cd4c9c69919a632cb0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rug
+    second: {fileID: 2100000, guid: ff25cdf93ab6fa0468d6b1b4ea1e7eb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Toilet
+    second: {fileID: 2100000, guid: 4830f922df8a20c4aaf2a31f695877e3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Walls
-    second: {fileID: 2100000, guid: 858995b82035e4443be5af0b66cdbcb6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wood.001
-    second: {fileID: 2100000, guid: e82bc59096783d34fa5e84d06ff053fc, type: 2}
+    second: {fileID: 2100000, guid: 41e2741780bf97943af2c49204d86510, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
