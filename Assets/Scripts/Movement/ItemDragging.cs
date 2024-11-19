@@ -7,6 +7,7 @@ public class ItemDragging : MonoBehaviour
     [SerializeField] private ItemClass itemSize;
     [SerializeField] private string itemID;
     [SerializeField] private AudioClip placeClip, upClip;
+    [SerializeField] private int destroyScore;
 
     private AudioSource audioSource;
 
@@ -65,6 +66,11 @@ public class ItemDragging : MonoBehaviour
     public int GetScore()
     {
         return tempScore;
+    }
+
+    public int GetDestroyScore()
+    {
+        return destroyScore;
     }
 
     public ItemClass GetItemClass()

@@ -14,6 +14,8 @@ public class MouseStateManager : MonoBehaviour
     private ItemManager IM;
     private Vector2 cursorHotspot;
     private int rateOfCleaning;
+    private int modif;
+    private float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +29,28 @@ public class MouseStateManager : MonoBehaviour
         detBSlider.value = detBCapacity;
         detAHolder.SetActive(true);
         detBHolder.SetActive(true);
+/*        modif = 10;
+        timer = 0f;*/
     }
 
     public MouseState GetMouseState()
     {
         return mouseState;
+    }
+
+    private void Update()
+    {
+ /*       timer += 120f * Time.deltaTime;
+        if (timer > 30)
+        {
+            if (modif > 0)
+                modif = -50;
+            else
+                modif = 50;
+            cursorHotspot = new Vector2((close.width / 2) + modif, (close.height / 2));
+            Cursor.SetCursor(close, cursorHotspot, CursorMode.Auto);
+            timer = 0;
+        }*/
     }
 
     public int GetMouseStateInt()

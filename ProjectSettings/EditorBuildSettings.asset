@@ -20,4 +20,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 09e50b887c91e664784f6277562b7a57
+  - enabled: 1
+    path: Assets/Scenes/Dialogue3.unity
+    guid: 62611d93c262b1b4b9812ada93ef3906
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 59716388b4e52674db619442486a8ceb
+  - enabled: 1
+    path: Assets/Scenes/Dialogue4.unity
+    guid: 4f5c2df69ce001f4b82054a3b50802ff
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 57d161189b83c5640bf99338f9210e41
+  - enabled: 1
+    path: Assets/Scenes/Dialogue5.unity
+    guid: 7c1125ca6a71bce49b7d7bb008e9aaef
   m_configObjects: {}

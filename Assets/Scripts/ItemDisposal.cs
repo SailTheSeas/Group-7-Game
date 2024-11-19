@@ -8,6 +8,7 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private ItemManager IM;
     private MouseStateManager MSM;
     private ItemDragging item;
+    private ScoreCounter SC;
     private int previousState;
     private bool isHovered;
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         IM = FindObjectOfType<ItemManager>();
         MSM = FindObjectOfType<MouseStateManager>();
+        SC = FindObjectOfType<ScoreCounter>();
     }
 
 
@@ -41,6 +43,7 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         
         if (isHovered)
         {
+            SC.UpdateScore(item.GetDestroyScore());
             item.DestroyObject();
             IM.SetHoldingState(false);
             isHovered = false;
@@ -52,6 +55,7 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerExit(PointerEventData pointerEventData)
     {
         MSM.SetMouseState(previousState);
+        isHovered = false;
         //IM.SetHoldingState(false);
 
     }
