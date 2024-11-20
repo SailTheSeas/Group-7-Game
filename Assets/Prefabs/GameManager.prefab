@@ -64,6 +64,7 @@ MonoBehaviour:
   changers:
   - {fileID: 0}
   - {fileID: 0}
+  transitionSpeed: 30
 --- !u!114 &2415390801812664962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +96,10 @@ MonoBehaviour:
   finishText: {fileID: 0}
   endDisplay: {fileID: 0}
   currentScore: 0
+  SD: {fileID: 0}
+  level: 0
+  contineButton: {fileID: 0}
+  victoryText: {fileID: 0}
 --- !u!114 &7953940959516058181
 MonoBehaviour:
   m_ObjectHideFlags: 0

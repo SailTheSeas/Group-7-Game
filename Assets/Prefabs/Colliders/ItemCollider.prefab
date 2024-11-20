@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2471993254545298253}
   - component: {fileID: 4055972962129776626}
   - component: {fileID: 4428763693440023340}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ItemCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,3 +71,4 @@ MonoBehaviour:
   room: {fileID: 0}
   sizeCanFit: 0
   itemId: 
+  freezeObject: 0

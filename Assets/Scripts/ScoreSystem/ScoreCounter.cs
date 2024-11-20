@@ -13,6 +13,8 @@ public class ScoreCounter : MonoBehaviour
     [SerializeField] private int currentScore;
     [SerializeField] private SaveData SD;
     [SerializeField] private int level;
+    [SerializeField] private GameObject contineButton;
+    [SerializeField] private TMP_Text victoryText;
 
     private MouseStateManager MSM;
     public void UpdateScore(int scoreChange)
@@ -43,23 +45,35 @@ public class ScoreCounter : MonoBehaviour
         float completion = (currentScore / (float)totalScore) * 100;       
         if (completion <= 0)
         {
+            victoryText.text = "level failed";
+            contineButton.SetActive(false);
             rating = 0;
         } else  if (completion > 0 && completion <= 45)
         {
             rating = 1;
+            victoryText.text = "level failed";
+            contineButton.SetActive(false);
         } else if (completion > 33 && completion < 80)
         {
             rating = 2;
-            
-            SD.SetLevelUnlock(level);
+            victoryText.text = "level accomplished !";
+            contineButton.SetActive(true);
+            if (level != 4)
+                SD.SetLevelUnlock(level + 1);
         } else if (completion >= 80 && completion < 100)
         {
             rating = 3;
-            SD.SetLevelUnlock(level);
+            victoryText.text = "level accomplished !";
+            contineButton.SetActive(true);
+            if (level != 4)
+                SD.SetLevelUnlock(level + 1);
         } else if (completion >= 100)
         {
             rating = 4;
-            SD.SetLevelUnlock(level);
+            victoryText.text = "level accomplished !";
+            contineButton.SetActive(true);
+            if (level != 4)
+                SD.SetLevelUnlock(level + 1);
         }
 
         if (SD.GetLevelScore(level) < rating)

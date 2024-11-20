@@ -407,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1993554313632738184, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.1010284
+      value: -2.1010132
       objectReference: {fileID: 0}
     - target: {fileID: 2193143927939501970, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Sprite
@@ -444,6 +444,10 @@ PrefabInstance:
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: startingRoom
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: transitionSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: rooms.Array.size

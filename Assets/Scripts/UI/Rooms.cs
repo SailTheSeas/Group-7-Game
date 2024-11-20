@@ -11,7 +11,7 @@ public class Rooms : MonoBehaviour
     [SerializeField] private GameObject cameraMain;
     [SerializeField] private RoomChanging[] changers;
     private float startTime, journeyLength;
-    private float transitionSpeed = 30f;
+    [SerializeField] private float transitionSpeed;
     private Vector3 startPosition;
 
 

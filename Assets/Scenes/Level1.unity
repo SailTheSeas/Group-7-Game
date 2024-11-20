@@ -6285,16 +6285,16 @@ PrefabInstance:
         to the knife before she did, though. Threw it on the sofa in the living room
         when I was done.
 
-        Ran through the living room trying to get out
-        and knocked the table and some stuff off the walls. Left a damn leaf out
-        of the plant on the floor, too.
+        Ran through the living room trying to get out and
+        knocked the table and some stuff off the walls. Left a damn leaf out of the
+        plant on the floor, too.
 
-        Ended up in the bedroom where she
-        almost got away. Chair''s knocked over, and her pillow got tossed on the
-        floor. Had to use a plate to stop her; it''s still there with the rest of
-        the mess.
+        Ended up in the bedroom where she almost
+        got away. Chair''s knocked over, and her pillow got tossed on the floor.
+        Had to use a plate to stop her; it''s still there with the rest of the mess.
 
-        You need to make it look like none of this ever happened. '
+        You
+        need to make it look like none of this ever happened. '
       objectReference: {fileID: 0}
     - target: {fileID: 1993554313632738184, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6336,6 +6336,10 @@ PrefabInstance:
       propertyPath: cameraMain
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: transitionSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: rooms.Array.data[0]
       value: 

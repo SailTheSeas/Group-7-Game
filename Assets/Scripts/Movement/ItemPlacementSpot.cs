@@ -12,9 +12,11 @@ public class ItemPlacementSpot : MonoBehaviour
     [SerializeField] private bool freezeObject;
 
     private ItemDragging item;
+    private MouseStateManager MSM;
     private bool isUsed;
     private int tempScore;
     private ScoreCounter SC;
+    private string nameOfStoredObject;
 
     public void SetIsUsed(bool state)
     {
@@ -43,6 +45,7 @@ public class ItemPlacementSpot : MonoBehaviour
     {
         isUsed = false;
         SC = FindObjectOfType<ScoreCounter>();
+        MSM = FindObjectOfType<MouseStateManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,7 +69,11 @@ public class ItemPlacementSpot : MonoBehaviour
         if (other.TryGetComponent<ItemDragging>(out item))
         {
             item.ResetPlacementSpot();
-            
+            if (other.name == item.name && isUsed)
+            {
+                SetIsUsed(false);
+                
+            }
         }
     }
 
