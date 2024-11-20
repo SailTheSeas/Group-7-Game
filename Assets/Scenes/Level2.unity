@@ -362,6 +362,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381085833439644093, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_text
+      value: "I thought the studio would be empty, just a quick grab-and-go with
+        the artwork. But the guy\u2026 he showed up out of nowhere. He wouldn\u2019t
+        calm down, and things got out of hand. I had to tie him up, but he broke
+        loose. We fought\u2014furniture got shoved around, tools ended up everywhere.\nThen
+        it happened. I didn\u2019t mean to. I grabbed something to keep him down,
+        but I\u2026 stabbed him. By mistake. There\u2019s blood everywhere\u2014on
+        the floor, the furniture, even his precious artwork.\nI escaped through the
+        bathroom window, left the knife nearby. The studio has to look untouched\u2014like
+        no one\u2019s been in there for weeks. Fix the furniture, get rid of the
+        blood, clean the artwork if you can, and make sure the bathroom is spotless.
+        Don\u2019t leave a trace.\n\nI\u2019m counting on you."
+      objectReference: {fileID: 0}
     - target: {fileID: 2193143927939501970, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -378,9 +396,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5231288482270238311, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 266.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231288482270238311, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.131
+      objectReference: {fileID: 0}
     - target: {fileID: 5555139502219989555, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822136633573741727, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain

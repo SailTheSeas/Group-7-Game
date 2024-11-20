@@ -303,6 +303,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381085833439644093, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_text
+      value: "The caretaker fed them. Poisoned food\u2014her doing. But it got messy.
+        She panicked, tore through the dormitory looking for the poison she\u2019d
+        hidden earlier. The place is a disaster\u2014beds knocked over, bowls and
+        utensils scattered everywhere, spilled food on the floors.\nAnd then she
+        saw me. I tried to calm her down, but she snapped. She was strong\u2014too
+        strong. There was a fight, and she left me bleeding all over the place. Now
+        there\u2019s too much of my blood mixed in with hers, and I can\u2019t let
+        them think this was on me.\nMake it look like a peaceful night, as if the
+        children were just sleeping, untouched. No signs of what they ate can remain\u2014utensils
+        can\u2019t stay by their sides."
+      objectReference: {fileID: 0}
     - target: {fileID: 2193143927939501970, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -310,6 +327,18 @@ PrefabInstance:
     - target: {fileID: 3984383459949112856, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231288482270238311, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 260.2256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231288482270238311, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.1128
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822136633573741727, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain

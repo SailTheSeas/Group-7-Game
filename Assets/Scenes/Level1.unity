@@ -6267,9 +6267,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381085833439644093, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1727143046659240073, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_text
+      value: 'Last night got out of hand.
+
+        It all started in the kitchen.
+        She tried to fight back, grabbed anything she could to defend herself. In
+        the scuffle, dishes got smashed, and they''re now all over the floor. Got
+        to the knife before she did, though. Threw it on the sofa in the living room
+        when I was done.
+
+        Ran through the living room trying to get out
+        and knocked the table and some stuff off the walls. Left a damn leaf out
+        of the plant on the floor, too.
+
+        Ended up in the bedroom where she
+        almost got away. Chair''s knocked over, and her pillow got tossed on the
+        floor. Had to use a plate to stop her; it''s still there with the rest of
+        the mess.
+
+        You need to make it look like none of this ever happened. '
       objectReference: {fileID: 0}
     - target: {fileID: 1993554313632738184, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6291,9 +6316,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5231288482270238311, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 266.7442
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231288482270238311, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.372101
+      objectReference: {fileID: 0}
     - target: {fileID: 5555139502219989555, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822136633573741727, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain
