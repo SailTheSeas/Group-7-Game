@@ -8,7 +8,7 @@ public class ItemDragging : MonoBehaviour
     [SerializeField] private string itemID;
     [SerializeField] private AudioClip placeClip, upClip;
     [SerializeField] private int destroyScore;
-
+    [SerializeField] private bool mustFreeze;
     private AudioSource audioSource;
 
     private int tempScore;
@@ -114,12 +114,15 @@ public class ItemDragging : MonoBehaviour
         floorLayer = LayerMask.GetMask("Floor");
         canBePlaced = false;
         isHeld = false;
-        freeze = false;
+        if (!mustFreeze)
+            freeze = false;
+        else
+            freeze = true;
         RB = GetComponent<Rigidbody>();
         itemManager = FindObjectOfType<ItemManager>();
         MSM = FindObjectOfType<MouseStateManager>();
         /*cameraPos = FindObjectOfType<Camera>().GetComponent<Transform>();*/
-        StartCoroutine(FreezeObject(2f));
+        //StartCoroutine(FreezeObject(2f));
     }
 
     private void Update()

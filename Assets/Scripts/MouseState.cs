@@ -16,6 +16,8 @@ public class MouseStateManager : MonoBehaviour
     private int rateOfCleaning;
     private int modif;
     private float timer;
+    private bool animateClean;
+    private Texture2D animationCursor;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +31,9 @@ public class MouseStateManager : MonoBehaviour
         detBSlider.value = detBCapacity;
         detAHolder.SetActive(true);
         detBHolder.SetActive(true);
-/*        modif = 10;
-        timer = 0f;*/
+        animateClean = false;
+        modif = 10;
+        timer = 0f;
     }
 
     public MouseState GetMouseState()
@@ -40,17 +43,20 @@ public class MouseStateManager : MonoBehaviour
 
     private void Update()
     {
- /*       timer += 120f * Time.deltaTime;
-        if (timer > 30)
+        if (animateClean)
         {
-            if (modif > 0)
-                modif = -50;
-            else
-                modif = 50;
-            cursorHotspot = new Vector2((close.width / 2) + modif, (close.height / 2));
-            Cursor.SetCursor(close, cursorHotspot, CursorMode.Auto);
-            timer = 0;
-        }*/
+            timer += 220f * Time.deltaTime;
+            if (timer > 30)
+            {
+                if (modif > 0)
+                    modif = -50;
+                else
+                    modif = 50;
+                cursorHotspot = new Vector2((close.width / 2) + modif, (close.height / 2));
+                Cursor.SetCursor(animationCursor, cursorHotspot, CursorMode.Auto);
+                timer = 0;
+            }
+        }
     }
 
     public int GetMouseStateInt()
@@ -153,14 +159,22 @@ public class MouseStateManager : MonoBehaviour
             case MouseState.drag:
                 break;
             case MouseState.clean:
+                animationCursor = clean;
+                animateClean = true;
                 break;
             case MouseState.cleanWeak:
+                animationCursor = clean;
+                animateClean = true;
                 break;
             case MouseState.cleanMedium:
                 detACapacity -= 50 * Time.deltaTime;
                 detASlider.value = detACapacity;
+                animationCursor = clean;
+                animateClean = true;
                 break;
             case MouseState.cleanStrong:
+                animationCursor = clean;
+                animateClean = true;
                 detBCapacity -= 50 * Time.deltaTime;
                 detBSlider.value = detBCapacity;
                 break;
@@ -171,8 +185,14 @@ public class MouseStateManager : MonoBehaviour
         }
     }
 
-    
+    public void ResetAnimator()
+    {
+        animateClean = false;
+    }
+
 }
+
+
 
 public enum MouseState
 {

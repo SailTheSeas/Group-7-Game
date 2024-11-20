@@ -68,6 +68,7 @@ public class Stain : MonoBehaviour
                     }
                     else
                     {
+                        MSM.ResetAnimator();
                         SC.UpdateScore(score);
                         this.gameObject.SetActive(false);
                         progressBar.SetState(false);

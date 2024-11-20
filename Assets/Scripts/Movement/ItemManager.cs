@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
     [SerializeField] private Texture2D open, close;
+    private MouseStateManager MSM;
     private Vector2 cursorHotspot;
     private ItemDragging heldItem;
     private bool isHolding;
@@ -12,11 +13,11 @@ public class ItemManager : MonoBehaviour
     public void SetHoldingState(bool state)
     {
         isHolding = state;
-        if (state)
+        if (state && MSM.GetMouseState() == MouseState.drag)
         {
             cursorHotspot = new Vector2(close.width / 2, close.height / 2);
             Cursor.SetCursor(close, cursorHotspot, CursorMode.Auto);
-        } else
+        } else if (MSM.GetMouseState() == MouseState.drag)
         {
             cursorHotspot = new Vector2(open.width / 2, open.height / 2);
             Cursor.SetCursor(open, cursorHotspot, CursorMode.Auto);
@@ -41,6 +42,7 @@ public class ItemManager : MonoBehaviour
     private void Start()
     {
         isHolding = false;
+        MSM = FindObjectOfType<MouseStateManager>();
     }
 
     private void Update()
