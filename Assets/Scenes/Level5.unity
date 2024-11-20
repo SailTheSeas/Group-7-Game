@@ -215,10 +215,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1096356896630352709, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1227466099921021077, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -311,21 +307,9 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 06f5327c8a8659b44aa589fd6c0f6660, type: 3}
-    - target: {fileID: 3619400682553599327, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 06f5327c8a8659b44aa589fd6c0f6660, type: 3}
-    - target: {fileID: 3938649977685441674, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -77
-      objectReference: {fileID: 0}
     - target: {fileID: 3984383459949112856, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Name
       value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 5555139502219989555, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain
@@ -391,10 +375,6 @@ PrefabInstance:
       propertyPath: positions.Array.data[2].z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7140256539741638309, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7194b907763190b4ab82436aaba93472, type: 3}
     - target: {fileID: 7424223213610725611, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_IsActive
       value: 0

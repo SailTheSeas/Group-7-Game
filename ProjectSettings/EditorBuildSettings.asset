@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogue5.unity
     guid: 7c1125ca6a71bce49b7d7bb008e9aaef
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: d34cc05e4ebfa43408492f783cd47dc3
+  - enabled: 1
+    path: Assets/Scenes/Dialogue6.unity
+    guid: 1703750987697594986f13316873f5d0
   m_configObjects: {}

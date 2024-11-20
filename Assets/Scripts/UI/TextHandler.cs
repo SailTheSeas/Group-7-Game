@@ -27,8 +27,10 @@ public class TextHandler : MonoBehaviour
     [SerializeField] private string levelScene;
     [SerializeField] private GameObject nextLevelButton;
 
+    [SerializeField] private bool startOnStart;
+
     private string[] dialogueLines;
-    private bool isTyping, startBattle, canClick;
+    private bool isTyping, canClick;
     private string textWriter;
     private int dialogueTracker;   
 
@@ -39,13 +41,15 @@ public class TextHandler : MonoBehaviour
         dialogueTracker = 0;
         totalDialogue = dialogue.GetTotalDialogueCount();
         dialogueLines = dialogue.GetDialogueLines();
-        dialogueBox.text = dialogueLines[dialogueTracker];
+        //dialogueBox.text = dialogueLines[dialogueTracker];
         textWriter = dialogueLines[dialogueTracker];
         dialogueTracker++;
         canClick = true;
         isTyping = true;
-        startBattle = false;
-        StartCoroutine(TypeTMP());
+        if (startOnStart)
+        {
+            StartCoroutine(TypeTMP());            
+        }
     }
 
     public void NextDialogue()
@@ -57,30 +61,18 @@ public class TextHandler : MonoBehaviour
 
                 if (dialogueTracker < totalDialogue)
                 {
-                    if (startBattle)
-                    {
-                        canClick = false;
-                        startBattle = false;
-                        
-                        /*SceneManager.LoadScene("CombatScene");*/
-                        //menuAnimator.SetInteger("ChangeScene", 1);
-                        isTyping = false;
-                        dialogueTracker++;
-                    }
-                    else
-                    {
-                        dialogueBox.text = dialogueLines[dialogueTracker];
-                        textWriter = dialogueLines[dialogueTracker];
-                        dialogueTracker++;
-                        isTyping = true;
-                        StartCoroutine(TypeTMP());
-                    }
 
+                    dialogueBox.text = dialogueLines[dialogueTracker];
+                    textWriter = dialogueLines[dialogueTracker];
+                    dialogueTracker++;
+                    isTyping = true;
+                    StartCoroutine(TypeTMP());                   
 
                 }
                 else
                 {
-                    nextLevelButton.SetActive(true);
+                    if (!startOnStart)
+                        nextLevelButton.SetActive(true);
                     Debug.Log("The End");
                 }
             }
@@ -97,6 +89,18 @@ public class TextHandler : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadSceneAsync(levelScene);
+    }
+
+    public void StopText()
+    {
+        StopCoroutine(TypeTMP());
+        isTyping = false;
+        dialogueBox.text = "";
+    }
+
+    public void StartText()
+    {
+        StartCoroutine(TypeTMP());
     }
 
     IEnumerator TypeTMP()

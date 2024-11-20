@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6312e007da7fadc43b2f2c6f97d07afe, type: 3}
-  m_Name: Level1
+  m_Name: Ring
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Howzit cleaner
-  - Long test to test typing speed lul lul
-  - Test 3
-  - Test 4
-  - Test 5
-  totalDialogue: 5
+  - ring...... ring........ ring...........
+  totalDialogue: 1

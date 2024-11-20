@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -431,7 +431,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6345708581247842577}
         m_TargetAssemblyTypeName: TextHandler, Assembly-CSharp
-        m_MethodName: NextDialogue
+        m_MethodName: StartText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -457,6 +457,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9083533277480981017}
+        m_TargetAssemblyTypeName: TextHandler, Assembly-CSharp
+        m_MethodName: StopText
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -496,6 +508,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5945237126516119272}
   - {fileID: 5998088591297317565}
   - {fileID: 2398624063923904169}
   - {fileID: 8803100143480438093}
@@ -898,6 +911,7 @@ MonoBehaviour:
   hasTypingChar: 1
   levelScene: Level2
   nextLevelButton: {fileID: 6519175022817414924}
+  startOnStart: 0
 --- !u!1 &5013377248767723560
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,7 +947,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -35.42534, y: -0.38987732}
+  m_AnchoredPosition: {x: -35.425354, y: -0.38989258}
   m_SizeDelta: {x: -313.0338, y: -188.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6005972096468189063
@@ -1335,6 +1349,62 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 500, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &8690404151307072145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5945237126516119272}
+  - component: {fileID: 9083533277480981017}
+  m_Layer: 0
+  m_Name: Ring
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5945237126516119272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690404151307072145}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.156837, y: 8.566036, z: 0.70646805}
+  m_LocalScale: {x: 0.7207206, y: 0.7207206, z: 0.7207206}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7064295915874594430}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9083533277480981017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690404151307072145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d399c3dd5af474c957c2c03617b9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 334c9b1a7802d3646ac8d210c1a431f1, type: 2}
+  dialogueBox: {fileID: 417329786184583233}
+  nextDialogue: {fileID: 8832266533919874101}
+  totalDialogue: 0
+  enemyDisp: {fileID: 0}
+  textStartDelay: 0.1
+  textCharacterDelay: 0.08
+  typingChar: '|'
+  hasTypingChar: 1
+  levelScene: Level1
+  nextLevelButton: {fileID: 6519175022817414924}
+  startOnStart: 1
 --- !u!1 &9046126376932207857
 GameObject:
   m_ObjectHideFlags: 0

@@ -135,9 +135,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 4364116506193558293, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6345708581247842577, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
       propertyPath: levelScene
       value: Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345708581247842577, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
+      propertyPath: startOnStart
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7064295915874594430, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
       propertyPath: m_Pivot.x
@@ -222,14 +230,6 @@ PrefabInstance:
     - target: {fileID: 7064295915874594430, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8803100143480438093, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -35.425354
-      objectReference: {fileID: 0}
-    - target: {fileID: 8803100143480438093, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.38989258
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
