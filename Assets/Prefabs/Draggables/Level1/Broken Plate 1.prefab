@@ -181,8 +181,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSize: 0
   itemID: 
-  placeClip: {fileID: 0}
-  upClip: {fileID: 0}
+  placeClip: {fileID: 8300000, guid: df20bf19fbd04474d88951cf0808e81a, type: 3}
+  upClip: {fileID: 8300000, guid: 963fccdcd178a8d4485667002ac6b310, type: 3}
+  destroyScore: 0
+  mustFreeze: 0
 --- !u!82 &6189454591184045241
 AudioSource:
   m_ObjectHideFlags: 0

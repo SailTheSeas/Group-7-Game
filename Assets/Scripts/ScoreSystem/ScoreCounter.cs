@@ -69,7 +69,7 @@ public class ScoreCounter : MonoBehaviour
                 SD.SetLevelUnlock(level + 1);
         } else if (completion >= 100)
         {
-            rating = 3;
+            rating = 4;
             victoryText.text = "level accomplished !";
             contineButton.SetActive(true);
             if (level != 4)

@@ -244,8 +244,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSize: 0
   itemID: 
-  placeClip: {fileID: 0}
-  upClip: {fileID: 0}
+  placeClip: {fileID: 8300000, guid: 695f6228039786d459b79835985bbf3e, type: 3}
+  upClip: {fileID: 8300000, guid: eba9bef59e445b84db5f15e2e08d5a33, type: 3}
+  destroyScore: 0
+  mustFreeze: 0
 --- !u!65 &6218213591558004923
 BoxCollider:
   m_ObjectHideFlags: 0

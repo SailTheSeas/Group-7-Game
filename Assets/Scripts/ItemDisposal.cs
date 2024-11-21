@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
 {
+    [SerializeField] private AudioClip clip;
+    [SerializeField] private AudioSource source;
     private ItemManager IM;
     private MouseStateManager MSM;
     private ItemDragging item;
@@ -49,6 +51,7 @@ public class ItemDisposal : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             isHovered = false;
             item = null;
             MSM.SetMouseState(previousState);
+            source.PlayOneShot(clip);
         }
     }
 
