@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6312e007da7fadc43b2f2c6f97d07afe, type: 3}
+  m_Name: Level3
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - Awe
+  - One of ours went rogue, so we taught him a lesson.
+  - Seems he was gonna talk, so Ratman went to take care of it.
+  - Long story short, the suicide attempt looks nothing like one.
+  - Clean up the place, erase every trace that he was there.
+  totalDialogue: 5

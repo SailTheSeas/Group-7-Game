@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Howzit cleaner
-  - Long test to test typing speed lul lul
-  - Test 3
-  - Test 4
-  - Test 5
-  totalDialogue: 5
+  - 'Howzit cleaner, got a job for you. '
+  - "Big Man had a mix up at his ex\u2019s house. A bloody mess it is. "
+  - They disposed the body, but the rest of the place still needs work.
+  - Big Man left a note for you, make sure you check it out.
+  - "Grab you stuff and get going, you don\u2019t have much time."
+  - "Oh, and don\u2019t mess up, my head is on the line, so is yours."
+  totalDialogue: 6

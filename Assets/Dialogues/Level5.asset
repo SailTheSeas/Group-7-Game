@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6312e007da7fadc43b2f2c6f97d07afe, type: 3}
+  m_Name: Level5
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - Howzit.
+  - Bigman got in trouble with another girl.
+  - Some caretaker at an orphanage.
+  - She poisoned the kids and then got in fight with him.
+  - His tracks are all over the place now, so clean it up.
+  - 'Look for the poison, can''t have any suspicions. '
+  - Oh and throw all the dishes too, they might still have traces of the blood.
+  totalDialogue: 5

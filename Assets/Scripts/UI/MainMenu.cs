@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private SaveData SD;
     public void LoadGame(int index)
     {
-        Debug.Log("Loading");
+        //Debug.Log("Loading");
         SceneManager.LoadSceneAsync(levels[index]);
         
     }

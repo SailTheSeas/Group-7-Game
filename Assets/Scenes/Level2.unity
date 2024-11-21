@@ -505,6 +505,14 @@ PrefabInstance:
         blood, clean the artwork if you can, and make sure the bathroom is spotless.
         Don\u2019t leave a trace.\n\nI\u2019m counting on you."
       objectReference: {fileID: 0}
+    - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_fontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1993554313632738184, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -2.1009521

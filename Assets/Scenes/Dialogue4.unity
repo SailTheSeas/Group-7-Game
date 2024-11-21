@@ -390,6 +390,10 @@ PrefabInstance:
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 6345708581247842577, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: 77ef38eee02005a49949a91729b5bca4, type: 2}
+    - target: {fileID: 6345708581247842577, guid: 58007e7bfdcf9fe4ab958a465f2c7bee, type: 3}
       propertyPath: levelScene
       value: Level4
       objectReference: {fileID: 0}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6312e007da7fadc43b2f2c6f97d07afe, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - Cleaner, howzit going?
+  - You're not supposed to answer that, it's rhetorical.
+  - You ever seen the painting in the boss's office?
+  - Well its gonna be worth a whole lot more now.
+  - Double D tried to rob the guy, and as you figure, it went out of hand.
+  - He left a note with all the detials, but I don't believe it was an accident.
+  - Man has issues.
+  - Whatever, take care of it, and be extra quick this time.
+  totalDialogue: 8
