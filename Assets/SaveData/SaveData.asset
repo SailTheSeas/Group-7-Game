@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34390e0c2ffa42342a21bd11dd0c3fe4, type: 3}
   m_Name: SaveData
   m_EditorClassIdentifier: 
-  levelUnlocked: 0101000000
+  levelUnlocked: 0101010101
   levelScore:
+  - 2
+  - 3
+  - 4
+  - 3
   - 1
-  - 0
-  - 0
-  - 0
-  - 0

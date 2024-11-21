@@ -39,4 +39,9 @@ public class SaveData : ScriptableObject
         levelUnlocked[index] = true;
     }
 
+    public void SetLevelLock(int index)
+    {
+        levelUnlocked[index] = false;
+    }
+
 }
