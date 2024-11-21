@@ -6149,24 +6149,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_text
-      value: 'Last night got out of hand.
+      value: 'Yo, dishes got smashed, and they''re now all over the floor. Got to
+        the knife before she did, haha , and forgot it in on the couch.
 
-        It all started in the kitchen.
-        She tried to fight back, grabbed anything she could to defend herself. In
-        the scuffle, dishes got smashed, and they''re now all over the floor. Got
-        to the knife before she did, though. Threw it on the sofa in the living room
-        when I was done.
+        I
+        rushed through the living room trying to get out and knocked the table and
+        something off the walls. Adamn leaf fell out the vase too. She almost got
+        away in the bedroom . Chair''s knocked over, and her pillow got tossed on
+        the floor. Had to use a stove plate to stop her; it''s still there with the
+        rest of the mess.
 
-        Ran through the living room trying to get out and
-        knocked the table and some stuff off the walls. Left a damn leaf out of the
-        plant on the floor, too.
 
-        Ended up in the bedroom where she almost
-        got away. Chair''s knocked over, and her pillow got tossed on the floor.
-        Had to use a plate to stop her; it''s still there with the rest of the mess.
-
-        You
-        need to make it look like none of this ever happened. '
+        You need to make it look like none of this ever
+        happened. '
       objectReference: {fileID: 0}
     - target: {fileID: 1993554313632738184, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.y
