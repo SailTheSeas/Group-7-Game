@@ -8,9 +8,10 @@ public class MouseStateManager : MonoBehaviour
     [SerializeField] private MouseState mouseState;
     [SerializeField] private int slowCleaning, mediumCleaning, fastCleaning;
     [SerializeField] private float detACapacity, detBCapacity;
-    [SerializeField] private Texture2D drag, clean, close, cleanM, cleanS;
+    [SerializeField] private Texture2D drag, clean, close;
     [SerializeField] private GameObject detAHolder, detBHolder;
     [SerializeField] private Slider detASlider, detBSlider;
+    [SerializeField] private GameObject detADisplay, detBDisplay;
     private ItemManager IM;
     private Vector2 cursorHotspot;
     private int rateOfCleaning;
@@ -29,8 +30,8 @@ public class MouseStateManager : MonoBehaviour
         detBSlider.maxValue = detBCapacity;
         detASlider.value = detACapacity;
         detBSlider.value = detBCapacity;
-        detAHolder.SetActive(true);
-        detBHolder.SetActive(true);
+        detAHolder.SetActive(false);
+        detBHolder.SetActive(false);
         animateClean = false;
         modif = 10;
         timer = 0f;
@@ -102,10 +103,14 @@ public class MouseStateManager : MonoBehaviour
         switch (index)
         {
             case 0:
+                detADisplay.SetActive(false);
+                detBDisplay.SetActive(false);
                 mouseState = MouseState.none;
                 Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
                 break;
             case 1:
+                detADisplay.SetActive(false);
+                detBDisplay.SetActive(false);
                 mouseState = MouseState.drag;
                 if (IM.GetHoldingState())
                 {
@@ -119,6 +124,8 @@ public class MouseStateManager : MonoBehaviour
 
                 break;
             case 2:
+                detADisplay.SetActive(false);
+                detBDisplay.SetActive(false);
                 mouseState = MouseState.cleanWeak;
                 cursorHotspot = new Vector2(clean.width/2, clean.height/2);
                 Cursor.SetCursor(clean, cursorHotspot, CursorMode.Auto);
@@ -127,17 +134,21 @@ public class MouseStateManager : MonoBehaviour
                 detBHolder.SetActive(false);*/
                 break;
             case 3:
+                detADisplay.SetActive(true);
+                detBDisplay.SetActive(false);
                 mouseState = MouseState.cleanMedium;
                 cursorHotspot = new Vector2(clean.width / 2, clean.height / 2);
-                Cursor.SetCursor(cleanM, cursorHotspot, CursorMode.Auto);
+                Cursor.SetCursor(clean, cursorHotspot, CursorMode.Auto);
                 rateOfCleaning = mediumCleaning;
                 /*detAHolder.SetActive(true);
                 detBHolder.SetActive(false);*/
                 break;
             case 4:
+                detADisplay.SetActive(false);
+                detBDisplay.SetActive(true);
                 mouseState = MouseState.cleanStrong;
                 cursorHotspot = new Vector2(clean.width / 2, clean.height / 2);
-                Cursor.SetCursor(cleanS, cursorHotspot, CursorMode.Auto);
+                Cursor.SetCursor(clean, cursorHotspot, CursorMode.Auto);
                 rateOfCleaning = fastCleaning;
                 /*detAHolder.SetActive(false);
                 detBHolder.SetActive(true);*/
@@ -169,11 +180,11 @@ public class MouseStateManager : MonoBehaviour
             case MouseState.cleanMedium:
                 detACapacity -= 50 * Time.deltaTime;
                 detASlider.value = detACapacity;
-                animationCursor = cleanM;
+                animationCursor = clean;
                 animateClean = true;
                 break;
             case MouseState.cleanStrong:
-                animationCursor = cleanS;
+                animationCursor = clean;
                 animateClean = true;
                 detBCapacity -= 50 * Time.deltaTime;
                 detBSlider.value = detBCapacity;

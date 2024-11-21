@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ProgressBar
+  - DetB
+  - DetA
   layers:
   - Default
   - TransparentFX

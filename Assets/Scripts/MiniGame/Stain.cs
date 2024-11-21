@@ -59,7 +59,7 @@ public class Stain : MonoBehaviour
         {
             if (canClean)
             {
-                if (MSM.GetMouseState() == requiredType)
+                if (MSM.GetMouseState() == requiredType || (MSM.GetMouseState() >= requiredType && requiredType == MouseState.none))
                 {
                     if (progress <= maxProgress)
                     {
