@@ -206,19 +206,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86aa978c53d904b48b4aab7dac1e1de4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.70679927
+      value: -0.7067992
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86aa978c53d904b48b4aab7dac1e1de4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.70679927
+      value: 0.7067992
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86aa978c53d904b48b4aab7dac1e1de4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.020852804
+      value: -0.020853655
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86aa978c53d904b48b4aab7dac1e1de4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.020852804
+      value: -0.020853655
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86aa978c53d904b48b4aab7dac1e1de4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86aa978c53d904b48b4aab7dac1e1de4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 228.38
+      value: 363.38
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 86aa978c53d904b48b4aab7dac1e1de4, type: 3}
       propertyPath: m_Name
@@ -269,8 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ecbc4451bc5d74b8a987f7084fae51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swapPosition: {x: 0, y: 0, z: 0}
-  swapRotation: {x: 0, y: 0, z: 0}
+  swapPosition: {x: -1.675844, y: 2.84, z: -4.716403}
+  swapRotation: {x: 270, y: 193.37997, z: 0}
   maxProgress: 150
   score: -1
 --- !u!65 &41022840
@@ -2426,6 +2426,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8857604420571955552, guid: 29775f77cf33a90478902dfbf9aafd02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1921665104058640874, guid: 29775f77cf33a90478902dfbf9aafd02, type: 3}
@@ -2674,19 +2678,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29faa09618b1fd746b9b862c55525fee, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70709276
+      value: 0.7070927
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29faa09618b1fd746b9b862c55525fee, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.70709276
+      value: -0.7070927
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29faa09618b1fd746b9b862c55525fee, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.004460156
+      value: -0.004461333
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29faa09618b1fd746b9b862c55525fee, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.004460156
+      value: -0.004461333
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29faa09618b1fd746b9b862c55525fee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2698,11 +2702,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 29faa09618b1fd746b9b862c55525fee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -135.723
+      value: -0.723
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 29faa09618b1fd746b9b862c55525fee, type: 3}
       propertyPath: m_Name
       value: Level02_Door_Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29faa09618b1fd746b9b862c55525fee, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2737,8 +2745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ecbc4451bc5d74b8a987f7084fae51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swapPosition: {x: 0, y: 0, z: 0}
-  swapRotation: {x: 0, y: 0, z: 0}
+  swapPosition: {x: 1.6334159, y: 3.0184507, z: -4.688119}
+  swapRotation: {x: 270, y: 89.27701, z: 0}
   maxProgress: 150
   score: -1
 --- !u!65 &1056121723
