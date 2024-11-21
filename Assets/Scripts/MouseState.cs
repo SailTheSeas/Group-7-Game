@@ -8,7 +8,7 @@ public class MouseStateManager : MonoBehaviour
     [SerializeField] private MouseState mouseState;
     [SerializeField] private int slowCleaning, mediumCleaning, fastCleaning;
     [SerializeField] private float detACapacity, detBCapacity;
-    [SerializeField] private Texture2D drag, clean, close;
+    [SerializeField] private Texture2D drag, clean, close, cleanM, cleanS;
     [SerializeField] private GameObject detAHolder, detBHolder;
     [SerializeField] private Slider detASlider, detBSlider;
     private ItemManager IM;
@@ -129,7 +129,7 @@ public class MouseStateManager : MonoBehaviour
             case 3:
                 mouseState = MouseState.cleanMedium;
                 cursorHotspot = new Vector2(clean.width / 2, clean.height / 2);
-                Cursor.SetCursor(clean, cursorHotspot, CursorMode.Auto);
+                Cursor.SetCursor(cleanM, cursorHotspot, CursorMode.Auto);
                 rateOfCleaning = mediumCleaning;
                 /*detAHolder.SetActive(true);
                 detBHolder.SetActive(false);*/
@@ -137,7 +137,7 @@ public class MouseStateManager : MonoBehaviour
             case 4:
                 mouseState = MouseState.cleanStrong;
                 cursorHotspot = new Vector2(clean.width / 2, clean.height / 2);
-                Cursor.SetCursor(clean, cursorHotspot, CursorMode.Auto);
+                Cursor.SetCursor(cleanS, cursorHotspot, CursorMode.Auto);
                 rateOfCleaning = fastCleaning;
                 /*detAHolder.SetActive(false);
                 detBHolder.SetActive(true);*/
@@ -169,11 +169,11 @@ public class MouseStateManager : MonoBehaviour
             case MouseState.cleanMedium:
                 detACapacity -= 50 * Time.deltaTime;
                 detASlider.value = detACapacity;
-                animationCursor = clean;
+                animationCursor = cleanM;
                 animateClean = true;
                 break;
             case MouseState.cleanStrong:
-                animationCursor = clean;
+                animationCursor = cleanS;
                 animateClean = true;
                 detBCapacity -= 50 * Time.deltaTime;
                 detBSlider.value = detBCapacity;

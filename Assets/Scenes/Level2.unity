@@ -273,6 +273,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 193.37997, z: 0}
   maxProgress: 150
   score: -1
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &41022840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -537,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822136633573741727, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain
@@ -926,6 +928,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 331.70377, z: 0}
   maxProgress: 200
   score: 3
+  MoveCamera: 0
+  dir: 0
 --- !u!1 &318090382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3594243245622329198, guid: 74098dd0c1ffec848b260b3a9a7488ca, type: 3}
@@ -2067,6 +2071,8 @@ MonoBehaviour:
   swapRotation: {x: 270.01978, y: 0, z: 0}
   maxProgress: 150
   score: 2
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &845310943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2529,6 +2535,8 @@ MonoBehaviour:
   swapRotation: {x: 270.01978, y: 0, z: 0}
   maxProgress: 100
   score: 2
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &1019004724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2749,6 +2757,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 89.27701, z: 0}
   maxProgress: 150
   score: -1
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &1056121723
 BoxCollider:
   m_ObjectHideFlags: 0

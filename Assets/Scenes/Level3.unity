@@ -431,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822136633573741727, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain
@@ -849,6 +849,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 180, z: 0}
   maxProgress: 150
   score: 2
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &218495708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -891,6 +893,8 @@ MonoBehaviour:
   swapRotation: {x: 270.01978, y: 0, z: 0}
   maxProgress: 300
   score: 3
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &219297547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2973,6 +2977,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 0, z: 0}
   maxProgress: 300
   score: 4
+  MoveCamera: 1
+  dir: 1
 --- !u!4 &1352426856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6705372115716575425, guid: c1275456e327e3b4aba6e7cf292202ab, type: 3}
@@ -3611,6 +3617,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 270, z: 0}
   maxProgress: 150
   score: 1
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &1948055476
 BoxCollider:
   m_ObjectHideFlags: 0

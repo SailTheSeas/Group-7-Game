@@ -297,6 +297,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 331.70377, z: 0}
   maxProgress: 200
   score: 2
+  MoveCamera: 0
+  dir: 0
 --- !u!4 &50451088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6705372115716575425, guid: c1275456e327e3b4aba6e7cf292202ab, type: 3}
@@ -436,7 +438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822136633573741727, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain
@@ -1305,6 +1307,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 256.01236, z: 0}
   maxProgress: 250
   score: 3
+  MoveCamera: 0
+  dir: 0
 --- !u!1 &326371220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7861854473326295642, guid: 873b7509ad2652b42ab9373279ad33ba, type: 3}
@@ -5554,7 +5558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7981654069289323030, guid: 8bab36c151399fc41968e7ef3803c739, type: 3}
       propertyPath: requiredType
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6531,6 +6535,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 93.6362, z: 0}
   maxProgress: 250
   score: 3
+  MoveCamera: 0
+  dir: 0
 --- !u!1 &1640942585
 GameObject:
   m_ObjectHideFlags: 0
@@ -6961,6 +6967,8 @@ MonoBehaviour:
   swapRotation: {x: 270.01978, y: 272.59937, z: 0}
   maxProgress: 250
   score: 3
+  MoveCamera: 0
+  dir: 0
 --- !u!1001 &1754311977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8833,6 +8841,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 296.75726, z: 0}
   maxProgress: 250
   score: 3
+  MoveCamera: 0
+  dir: 0
 --- !u!1001 &1989751226
 PrefabInstance:
   m_ObjectHideFlags: 0

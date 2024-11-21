@@ -10,6 +10,8 @@ public class WorldObject : MonoBehaviour
     [SerializeField] private Vector3 swapRotation;
     [SerializeField] private int maxProgress;
     [SerializeField] private int score;
+    [SerializeField] private bool MoveCamera;
+    [SerializeField] private int dir;
     private Texture2D open, close;
     private Vector2 cursorHotspot;
     private ScoreCounter SC;
@@ -18,6 +20,7 @@ public class WorldObject : MonoBehaviour
     private bool isMoved, isPressed;
     private Progressbar progressBar;
     private float progress;
+    private Rooms RMS;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,8 @@ public class WorldObject : MonoBehaviour
         startRotation = this.transform.rotation.eulerAngles;
         open = MSM.GetOpenHand();
         close = MSM.GetCloseHand();
+        if (MoveCamera)
+            RMS = FindObjectOfType<Rooms>();
     }
 
     private void OnMouseEnter()
@@ -91,6 +96,11 @@ public class WorldObject : MonoBehaviour
                         this.transform.localPosition = swapPosition;
                         this.transform.localRotation = Quaternion.Euler(swapRotation);
                         isMoved = true;
+                        if (MoveCamera)
+                        {
+                            RMS.ChangeRoom(dir);
+                            dir *= -1;
+                        }
                         SC.UpdateScore(score);
                     }
                     else
@@ -98,6 +108,11 @@ public class WorldObject : MonoBehaviour
                         this.transform.localPosition = startPosition;
                         this.transform.rotation = Quaternion.Euler(startRotation);
                         isMoved = false;
+                        if (MoveCamera)
+                        {
+                            RMS.ChangeRoom(dir);
+                            dir *= -1;
+                        }
                         SC.UpdateScore(-1 * score);
                     }
                     //progressBar.SetState(false);

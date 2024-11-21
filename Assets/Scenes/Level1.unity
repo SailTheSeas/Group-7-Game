@@ -722,6 +722,8 @@ MonoBehaviour:
   swapRotation: {x: 270.01978, y: 180, z: 0}
   maxProgress: 400
   score: 1
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &339229855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4367,6 +4369,8 @@ MonoBehaviour:
   swapRotation: {x: -90, y: -90, z: 180}
   maxProgress: 200
   score: -1
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &1416847083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4553,6 +4557,8 @@ MonoBehaviour:
   swapRotation: {x: 270, y: 16.332401, z: 0}
   maxProgress: 200
   score: 1
+  MoveCamera: 0
+  dir: 0
 --- !u!65 &1477719259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6117,6 +6123,8 @@ MonoBehaviour:
   swapRotation: {x: 0, y: 0, z: 0}
   maxProgress: 400
   score: 1
+  MoveCamera: 0
+  dir: 0
 --- !u!23 &2146256360
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6304,6 +6312,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 06f5327c8a8659b44aa589fd6c0f6660, type: 3}
+    - target: {fileID: 3146524007299424901, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3619400682553599327, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6330,7 +6342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822136633573741727, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain
@@ -6352,6 +6364,10 @@ PrefabInstance:
       propertyPath: rooms.Array.data[2]
       value: 
       objectReference: {fileID: 1788245417}
+    - target: {fileID: 6735690549600512531, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: totalTime
+      value: 301
+      objectReference: {fileID: 0}
     - target: {fileID: 7140256539741638309, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Sprite
       value: 

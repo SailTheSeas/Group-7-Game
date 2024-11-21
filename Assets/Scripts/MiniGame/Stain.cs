@@ -49,6 +49,7 @@ public class Stain : MonoBehaviour
         if (MSM.GetMouseState() == MouseState.cleanMedium || MSM.GetMouseState() == MouseState.cleanWeak || MSM.GetMouseState() == MouseState.cleanStrong)
         {
             canClean = false;
+            MSM.ResetAnimator();
         }
     }
 
