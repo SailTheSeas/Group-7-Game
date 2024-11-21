@@ -403,14 +403,11 @@ PrefabInstance:
     - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_text
       value: "I had to use the chair from the bedroom to hang him in the bathroom.
-        I thought it would be easy to stage it, but I underestimated the mess. There
-        are shoe prints on the chair, blood trails from dragging the body wrapped
-        in that mat from the dining area, and furniture got shifted everywhere in
-        the chaos.\nThe guy was prescribed some meds\u2014those are still lying around.
-        His files, prescriptions, and notes are all over the place too.\nMake it
-        look like a suicide. Get rid of all signs of a struggle or\nErase any trace
-        he was ever here. \nWhatever you do, make sure there\u2019s nothing left
-        to link this back to u"
+        There  blood trails from dragging the body wrapped in that mat from the dining
+        area, and furniture got shifted everywhere in the chaos.\nThe guy was prescribed
+        some meds\u2014those are still lying around. His files, prescriptions, and
+        notes are all over the place too.\n\nWhatever you do, make sure there\u2019s
+        nothing left to link this back to this guys presence."
       objectReference: {fileID: 0}
     - target: {fileID: 1993554313632738184, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.y
