@@ -402,6 +402,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_text
+      value: "They knew too much. They wouldn\u2019t stop digging, wouldn\u2019t
+        stop asking questions. I handled it, but it got messy\u2014too messy.\nThe
+        office is a disaster. The cooler tipped, water spilled everywhere, and those
+        bloody pages\u2026 they\u2019re still there. The files are out, drawers left
+        wide open.\nIn the meeting room, things are worse. Chairs knocked over, stacked
+        awkwardly, and a vase shattered on the floor. The body\u2014it\u2019s right
+        there. And the cameras\u2026 they\u2019ve been watching.\nYou know what to
+        do. Fix the mess. Hide the truth. Make it look like a meeting that ended
+        hours ago, nothing more. No blood, no bodies, no questions."
+      objectReference: {fileID: 0}
     - target: {fileID: 2193143927939501970, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -421,6 +433,10 @@ PrefabInstance:
     - target: {fileID: 5555139502219989555, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822136633573741727, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain
