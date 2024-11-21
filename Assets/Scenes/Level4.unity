@@ -440,6 +440,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6059823792133602803, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_text
+      value: of 3 stars
+      objectReference: {fileID: 0}
     - target: {fileID: 6539380005224948282, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: cameraMain
       value: 
