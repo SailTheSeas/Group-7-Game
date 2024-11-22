@@ -8,7 +8,9 @@ public class Stain : MonoBehaviour
     [SerializeField] private int maxProgress;
     [SerializeField] private int score;
     [SerializeField] private MouseState requiredType;
+    [SerializeField] private AudioClip wipe;
 
+    private AudioSource source;
     
     private MouseStateManager MSM;
     private ScoreCounter SC;
@@ -19,6 +21,7 @@ public class Stain : MonoBehaviour
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
         progress = 0;
         isRuined = false;
         SC = FindObjectOfType<ScoreCounter>();
@@ -48,6 +51,7 @@ public class Stain : MonoBehaviour
     {
         if (MSM.GetMouseState() == MouseState.cleanMedium || MSM.GetMouseState() == MouseState.cleanWeak || MSM.GetMouseState() == MouseState.cleanStrong)
         {
+            source.Stop();
             canClean = false;
             MSM.ResetAnimator();
         }
@@ -63,12 +67,15 @@ public class Stain : MonoBehaviour
                 {
                     if (progress <= maxProgress)
                     {
+                        if (!source.isPlaying)
+                            source.PlayOneShot(wipe);
                         progress += MSM.GetRateOfCleaing() * Time.deltaTime;
                         MSM.UseDetergent();
                         progressBar.SetProgress(progress, maxProgress);
                     }
                     else
                     {
+                        source.Stop();
                         MSM.ResetAnimator();
                         SC.UpdateScore(score);
                         this.gameObject.SetActive(false);

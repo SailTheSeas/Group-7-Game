@@ -12,6 +12,11 @@ public class WorldObject : MonoBehaviour
     [SerializeField] private int score;
     [SerializeField] private bool MoveCamera;
     [SerializeField] private int dir;
+    [SerializeField] private AudioClip drag;
+
+    private AudioSource source;
+
+
     private Texture2D open, close;
     private Vector2 cursorHotspot;
     private ScoreCounter SC;
@@ -25,6 +30,7 @@ public class WorldObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         SC = FindObjectOfType<ScoreCounter>();
         MSM = FindObjectOfType<MouseStateManager>();
         progressBar = GameObject.FindGameObjectWithTag("ProgressBar").GetComponent<Progressbar>();
@@ -71,6 +77,7 @@ public class WorldObject : MonoBehaviour
         if (MSM.GetMouseState() == MouseState.drag)
         {
             isPressed = false;
+            source.Stop();
             progress = 0;
             progressBar.SetProgress(0, maxProgress);
             cursorHotspot = new Vector2(open.width / 2, open.height / 2);
@@ -86,11 +93,14 @@ public class WorldObject : MonoBehaviour
             {
                 if (progress <= maxProgress)
                 {
+                    if (!source.isPlaying)
+                        source.PlayOneShot(drag);
                     progress += 200 * Time.deltaTime;
                     progressBar.SetProgress(progress, maxProgress);
                 }
                 else
                 {
+                    source.Stop();
                     if (!isMoved)
                     {
                         this.transform.localPosition = swapPosition;
