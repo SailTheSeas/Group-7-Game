@@ -501,6 +501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1381085833439644093, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18
+      objectReference: {fileID: 0}
     - target: {fileID: 1798384726105273379, guid: afe28002ac57de24fbf57bc914d7dd9e, type: 3}
       propertyPath: m_text
       value: "Those bloody pages\u2026 they\u2019re still there and scattered everywhere.\nIn
